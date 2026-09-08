@@ -1,0 +1,29 @@
+# Baseline forest and coupled kingdom parameters. Unlisted settings use validated defaults.
+[world]
+size = 256
+kingdoms = 4
+macro_interval = 16
+episode_ticks = 20000
+digest_interval = 64
+forest_warmup = 3000
+[forest]
+p_growth = 0.02
+f_lightning = 2e-5
+base_spread = 0.65
+t_mature = 40
+t_burn = 1
+t_ash = 30
+ash_fertility = 0.15
+dryness_period = 2000
+dryness_amp = 0.35
+[terrain]
+sea_level = 12
+moisture_range = 64
+[soil]
+r_recover = 2e-4
+fertility_max = 1.0
+
+[simulation]
+enabled = 1
+max_nodes = 512
+policy = 2

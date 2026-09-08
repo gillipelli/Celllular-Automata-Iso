@@ -1,0 +1,9 @@
+# Diagnostic preset: frequent fires for exercising event merges and the renderer.
+# This is not the calibrated baseline and carries no SOC claim.
+[world]
+size = 128
+forest_warmup = 3000
+[forest]
+p_growth = 0.05
+f_lightning = 0.001
+base_spread = 0.85

@@ -1,0 +1,21 @@
+{
+  "seed": 1,
+  "ticks": 20000,
+  "warmup": 3000,
+  "threads": 1,
+  "config_file": "config/default.toml",
+  "runs": [
+    {
+      "size": 128,
+      "events_sha256": "fc516421e1bacf051f1e40d99d629417b2aa4663c06939d610923a5c2bafe3e9",
+      "coverage_first_quarter": 0.7158832756410256,
+      "coverage_last_quarter": 0.6885830673076924
+    },
+    {
+      "size": 256,
+      "events_sha256": "cf1795abcec2a30dc3957de23a10b35679eee49dab8158808ee6eb92f471da5e",
+      "coverage_first_quarter": 0.3077970705128205,
+      "coverage_last_quarter": 0.29536238141025645
+    }
+  ]
+}

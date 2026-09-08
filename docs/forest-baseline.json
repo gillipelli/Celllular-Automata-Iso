@@ -1,0 +1,34 @@
+{
+  "method": "discrete MLE; Hurwitz zeta; KS-minimized xmin; at least 100 tail events",
+  "results": [
+    {
+      "file": "docs/data/fires-128-seed1.csv.gz",
+      "samples": 4332,
+      "maximum": 2484,
+      "fit": {
+        "tau": 1.6339984141417996,
+        "xmin": 8,
+        "tail_samples": 1868,
+        "ks": 0.035524277399105075,
+        "decades": 2.492061604512599
+      },
+      "necessary_conditions_pass": false
+    },
+    {
+      "file": "docs/data/fires-256-seed1.csv.gz",
+      "samples": 7472,
+      "maximum": 2813,
+      "fit": {
+        "tau": 1.6841993228106873,
+        "xmin": 17,
+        "tail_samples": 2059,
+        "ks": 0.03654417699701057,
+        "decades": 2.218720810786927
+      },
+      "necessary_conditions_pass": false
+    }
+  ],
+  "note": "Passing necessary conditions does not establish SOC; bootstrap and model comparisons remain required.",
+  "tau_difference": 0.05020090866888771,
+  "size_stability_pass": true
+}

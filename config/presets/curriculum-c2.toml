@@ -1,0 +1,11 @@
+[world]
+size = 64
+kingdoms = 2
+forest_warmup = 100
+episode_ticks = 2000
+[forest]
+f_lightning = 2e-05
+[epi]
+p_spontaneous = 0
+[war]
+alpha = 0
