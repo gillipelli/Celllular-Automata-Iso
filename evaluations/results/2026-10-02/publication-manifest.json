@@ -1,0 +1,45 @@
+{
+  "note": "Published copies normalize local absolute paths; original hashes refer to local source artifacts. No runtime changes.",
+  "files": [
+    {
+      "path": "systematic-development-v2/aggregate.json",
+      "source_sha256": "87d959d8e2bc86ae99dc52dfd18c93452d96e4051c1188c7815eede46c44e120",
+      "published_sha256": "b7e08e49142eaccd95b24e8cb7ed1c21c1086f3018eb79f063031f41dd85a27c"
+    },
+    {
+      "path": "systematic-development-v2/trace-audit.json",
+      "source_sha256": "0786441ec7d192fb231260a99c5edcc4220820a0f248f140ec00522187f1479f",
+      "published_sha256": "0786441ec7d192fb231260a99c5edcc4220820a0f248f140ec00522187f1479f"
+    },
+    {
+      "path": "systematic-development-v2/stage_manifest.json",
+      "source_sha256": "68463cb5aa7b5013c0df1a923334d7e6222ff068dbabb9d49716827967c65cd4",
+      "published_sha256": "ca00c25207707f6979197483e781cd281e77cf5e1470f0de82b09d2c20b953b3"
+    },
+    {
+      "path": "systematic-development-v2/replay.log",
+      "source_sha256": "e017e834a02bd43f2ead7e6e0745f30290001524f311f43f50a8b4408a52b917",
+      "published_sha256": "e017e834a02bd43f2ead7e6e0745f30290001524f311f43f50a8b4408a52b917"
+    },
+    {
+      "path": "systematic-holdout-v1/aggregate.json",
+      "source_sha256": "2d474cf2576d662bb8897e4ecea9fc1de4029d9c7ac163ccaa54d462acc1d53c",
+      "published_sha256": "6112ca16b49df53ea940a2fdd4393af33667ceaf3adfc1e7897a47f9328085bd"
+    },
+    {
+      "path": "systematic-holdout-v1/trace-audit.json",
+      "source_sha256": "e6b028144800c178ac1a93318a6ef34e14bc9900324c6e3cbc9490ceab64a7ca",
+      "published_sha256": "e6b028144800c178ac1a93318a6ef34e14bc9900324c6e3cbc9490ceab64a7ca"
+    },
+    {
+      "path": "systematic-holdout-v1/stage_manifest.json",
+      "source_sha256": "273b49feac2e75da0a5d0c3de7b4fcd54e6140524374cd0c51ea8bd44d00e536",
+      "published_sha256": "50e4c9afea44fb0eb6962540df31d7629f47e5482a47c2349ca14e84ac180b0c"
+    },
+    {
+      "path": "systematic-holdout-v1/replay.log",
+      "source_sha256": "82f86c953de50fc9ed3391ad74a26481613e2e2d05369316884905267c135865",
+      "published_sha256": "82f86c953de50fc9ed3391ad74a26481613e2e2d05369316884905267c135865"
+    }
+  ]
+}

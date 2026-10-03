@@ -1,0 +1,4490 @@
+{
+  "manifest": {
+    "stage": "development",
+    "suites": {
+      "development-shard-0.json": "11a149f366787e359034faff98882e31d453553bc1c89d0e7827d919be680a05",
+      "development-shard-1.json": "9ef82cd471220b877ec22c9e6309c491aeb6a3c2864f802b0cc0e8f333beed70",
+      "development-shard-2.json": "e5893edf1200781f349d5fb19b09a34309a1f34728ea000fac91e8a1fd616199",
+      "development-shard-3.json": "098b47d3edd4ef0971fa3ccf69acb861db326fd955979644661b5dbc7a1789bf"
+    },
+    "model": "glm-5.3",
+    "reasoning_effort": "low",
+    "max_output_tokens": 4096,
+    "global_ledger": "<local-campaign>/budget.sqlite",
+    "note": "Each shard has its own USD ledger; campaign token ceiling is shared."
+  },
+  "shards": [
+    {
+      "suite": "development-shard-0.json",
+      "returncode": 0,
+      "directory": "runs/agents/systematic-development-v2/development-shard-0"
+    },
+    {
+      "suite": "development-shard-1.json",
+      "returncode": 0,
+      "directory": "runs/agents/systematic-development-v2/development-shard-1"
+    },
+    {
+      "suite": "development-shard-2.json",
+      "returncode": 0,
+      "directory": "runs/agents/systematic-development-v2/development-shard-2"
+    },
+    {
+      "suite": "development-shard-3.json",
+      "returncode": 0,
+      "directory": "runs/agents/systematic-development-v2/development-shard-3"
+    }
+  ],
+  "gates": {
+    "all_shards_successful": true,
+    "all_episodes_completed": true,
+    "all_replays_match": true,
+    "autonomous_valid_decision_rate": 1.0,
+    "decisions": 160,
+    "fallbacks": 0,
+    "replay_failures": []
+  },
+  "episodes": [
+    {
+      "id": "100-0-llm-memory-r0",
+      "seed": 100,
+      "position": 0,
+      "repeat": 0,
+      "variant": "llm-memory",
+      "controller": "llm",
+      "scenario": "calibrated-demo-1024ticks",
+      "track": "partial",
+      "steps": 256,
+      "decision_interval": 16,
+      "planning_budget": null,
+      "use_memory": true,
+      "status": "completed",
+      "result": {
+        "status": "completed",
+        "steps": 256,
+        "digest": 15099259428014357494,
+        "track": "partial",
+        "controllers": [
+          "llm",
+          "native",
+          "native",
+          "native"
+        ],
+        "decisions": 16,
+        "attempted_decisions": 16,
+        "fallbacks": 0,
+        "validation_failures": 0,
+        "decision_seconds": 1463.3074701849982,
+        "decision_latencies": [
+          7.224330783999903,
+          10.184794897999382,
+          8.20978707500035,
+          11.477951236999616,
+          7.755647581999256,
+          1327.0676874380006,
+          10.303316825000365,
+          11.86295575999975,
+          8.808183057999486,
+          8.12223295199874,
+          5.255333192000762,
+          9.920511321000959,
+          6.193364431999726,
+          8.843847412999821,
+          9.226028667999344,
+          12.851497550000204
+        ],
+        "tool_calls": 16,
+        "final_observations": [
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 0,
+            "generation": 1,
+            "alive": true,
+            "population": 2196.624496459961,
+            "military": 0,
+            "infected": 88.33174133300781,
+            "area": 2035,
+            "nodes": 28,
+            "functional_nodes": 28,
+            "stock": {
+              "wood": 11642.110076904297,
+              "stone": 1489,
+              "grain": 33965.249450683594,
+              "treasury": 13761.800582885742
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 1,
+            "generation": 1,
+            "alive": true,
+            "population": 2004.279052734375,
+            "military": 0,
+            "infected": 183.87818908691406,
+            "area": 1374,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 8655.67512512207,
+              "stone": 0,
+              "grain": 40721.356689453125,
+              "treasury": 31557.899612426758
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 2,
+            "generation": 1,
+            "alive": false,
+            "population": 0,
+            "military": 0,
+            "infected": 0,
+            "area": 0,
+            "nodes": 84,
+            "functional_nodes": 0,
+            "stock": {
+              "wood": 3324.2803955078125,
+              "stone": 15,
+              "grain": 0,
+              "treasury": 28004.81575012207
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 3,
+            "generation": 1,
+            "alive": true,
+            "population": 745.2513732910156,
+            "military": 0,
+            "infected": 1.072113037109375,
+            "area": 357,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 7224.6961669921875,
+              "stone": 0,
+              "grain": 0,
+              "treasury": 29444.545654296875
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          }
+        ],
+        "initial_generations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "original_generation_survival": [
+          true,
+          true,
+          false,
+          true
+        ],
+        "current_slot_alive": [
+          true,
+          true,
+          false,
+          true
+        ],
+        "estimated_cost": 0.07909079999999999,
+        "cumulative_reserved_spend": 0.07909079999999999,
+        "usage": [
+          {
+            "input_tokens": 2422,
+            "output_tokens": 276,
+            "estimated_cost": 0.004605199999999999
+          },
+          {
+            "input_tokens": 2442,
+            "output_tokens": 255,
+            "estimated_cost": 0.004540799999999999
+          },
+          {
+            "input_tokens": 2445,
+            "output_tokens": 283,
+            "estimated_cost": 0.0046682
+          },
+          {
+            "input_tokens": 2445,
+            "output_tokens": 402,
+            "estimated_cost": 0.0051918
+          },
+          {
+            "input_tokens": 2444,
+            "output_tokens": 374,
+            "estimated_cost": 0.0050672
+          },
+          {
+            "input_tokens": 2445,
+            "output_tokens": 284,
+            "estimated_cost": 0.004672600000000001
+          },
+          {
+            "input_tokens": 2454,
+            "output_tokens": 396,
+            "estimated_cost": 0.005178
+          },
+          {
+            "input_tokens": 2455,
+            "output_tokens": 458,
+            "estimated_cost": 0.005452200000000001
+          },
+          {
+            "input_tokens": 2452,
+            "output_tokens": 388,
+            "estimated_cost": 0.00514
+          },
+          {
+            "input_tokens": 2455,
+            "output_tokens": 269,
+            "estimated_cost": 0.004620600000000001
+          },
+          {
+            "input_tokens": 2455,
+            "output_tokens": 242,
+            "estimated_cost": 0.0045018
+          },
+          {
+            "input_tokens": 2466,
+            "output_tokens": 435,
+            "estimated_cost": 0.0053663999999999995
+          },
+          {
+            "input_tokens": 2465,
+            "output_tokens": 356,
+            "estimated_cost": 0.0050174
+          },
+          {
+            "input_tokens": 2465,
+            "output_tokens": 308,
+            "estimated_cost": 0.0048062
+          },
+          {
+            "input_tokens": 2464,
+            "output_tokens": 333,
+            "estimated_cost": 0.0049148
+          },
+          {
+            "input_tokens": 2462,
+            "output_tokens": 432,
+            "estimated_cost": 0.0053476
+          }
+        ]
+      }
+    },
+    {
+      "id": "100-0-llm-no-memory-r0",
+      "seed": 100,
+      "position": 0,
+      "repeat": 0,
+      "variant": "llm-no-memory",
+      "controller": "llm",
+      "scenario": "calibrated-demo-1024ticks",
+      "track": "partial",
+      "steps": 256,
+      "decision_interval": 16,
+      "planning_budget": null,
+      "use_memory": false,
+      "status": "completed",
+      "result": {
+        "status": "completed",
+        "steps": 256,
+        "digest": 8810630545767616284,
+        "track": "partial",
+        "controllers": [
+          "llm",
+          "native",
+          "native",
+          "native"
+        ],
+        "decisions": 16,
+        "attempted_decisions": 16,
+        "fallbacks": 0,
+        "validation_failures": 0,
+        "decision_seconds": 136.15004580400273,
+        "decision_latencies": [
+          6.653813064000133,
+          8.571876302999954,
+          9.629148325000642,
+          6.21064020599988,
+          8.796782122000877,
+          13.560524991999046,
+          8.884510740999758,
+          5.901054398000269,
+          7.012747627000863,
+          8.2474215680013,
+          9.310283155000434,
+          7.343252967999433,
+          11.089949657000034,
+          8.10277385900008,
+          7.098878165999849,
+          9.736388653000176
+        ],
+        "tool_calls": 16,
+        "final_observations": [
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 0,
+            "generation": 1,
+            "alive": true,
+            "population": 2200.4774627685547,
+            "military": 0,
+            "infected": 108.00920104980469,
+            "area": 2025,
+            "nodes": 23,
+            "functional_nodes": 23,
+            "stock": {
+              "wood": 11946.954666137695,
+              "stone": 1364,
+              "grain": 24996.535720825195,
+              "treasury": 19311.01774597168
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 1,
+            "generation": 1,
+            "alive": true,
+            "population": 1960.5318603515625,
+            "military": 0,
+            "infected": 145.49546813964844,
+            "area": 1358,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 8695.641143798828,
+              "stone": 0,
+              "grain": 41001.31716918945,
+              "treasury": 31581.894500732422
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 2,
+            "generation": 1,
+            "alive": false,
+            "population": 0,
+            "military": 0,
+            "infected": 0,
+            "area": 0,
+            "nodes": 89,
+            "functional_nodes": 0,
+            "stock": {
+              "wood": 3219.2883911132812,
+              "stone": 15,
+              "grain": 0,
+              "treasury": 28042.885696411133
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 3,
+            "generation": 1,
+            "alive": true,
+            "population": 795.8414916992188,
+            "military": 0,
+            "infected": 1.49261474609375,
+            "area": 394,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 7299.726150512695,
+              "stone": 0,
+              "grain": 0,
+              "treasury": 29728.09976196289
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          }
+        ],
+        "initial_generations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "original_generation_survival": [
+          true,
+          true,
+          false,
+          true
+        ],
+        "current_slot_alive": [
+          true,
+          true,
+          false,
+          true
+        ],
+        "estimated_cost": 0.08127760000000006,
+        "cumulative_reserved_spend": 0.16036840000000005,
+        "usage": [
+          {
+            "input_tokens": 2422,
+            "output_tokens": 366,
+            "estimated_cost": 0.0050012
+          },
+          {
+            "input_tokens": 2440,
+            "output_tokens": 461,
+            "estimated_cost": 0.005444399999999999
+          },
+          {
+            "input_tokens": 2446,
+            "output_tokens": 344,
+            "estimated_cost": 0.004938
+          },
+          {
+            "input_tokens": 2447,
+            "output_tokens": 307,
+            "estimated_cost": 0.004776600000000001
+          },
+          {
+            "input_tokens": 2441,
+            "output_tokens": 313,
+            "estimated_cost": 0.0047945999999999996
+          },
+          {
+            "input_tokens": 2446,
+            "output_tokens": 493,
+            "estimated_cost": 0.005593600000000001
+          },
+          {
+            "input_tokens": 2453,
+            "output_tokens": 361,
+            "estimated_cost": 0.0050226
+          },
+          {
+            "input_tokens": 2454,
+            "output_tokens": 319,
+            "estimated_cost": 0.0048392
+          },
+          {
+            "input_tokens": 2453,
+            "output_tokens": 348,
+            "estimated_cost": 0.0049654
+          },
+          {
+            "input_tokens": 2451,
+            "output_tokens": 322,
+            "estimated_cost": 0.0048481999999999996
+          },
+          {
+            "input_tokens": 2453,
+            "output_tokens": 325,
+            "estimated_cost": 0.0048642
+          },
+          {
+            "input_tokens": 2463,
+            "output_tokens": 408,
+            "estimated_cost": 0.0052434
+          },
+          {
+            "input_tokens": 2461,
+            "output_tokens": 401,
+            "estimated_cost": 0.0052098
+          },
+          {
+            "input_tokens": 2462,
+            "output_tokens": 470,
+            "estimated_cost": 0.005514799999999999
+          },
+          {
+            "input_tokens": 2461,
+            "output_tokens": 322,
+            "estimated_cost": 0.0048622
+          },
+          {
+            "input_tokens": 2461,
+            "output_tokens": 435,
+            "estimated_cost": 0.005359399999999999
+          }
+        ]
+      }
+    },
+    {
+      "id": "100-0-scripted-r0",
+      "seed": 100,
+      "position": 0,
+      "repeat": 0,
+      "variant": "scripted",
+      "controller": "scripted",
+      "scenario": "calibrated-demo-1024ticks",
+      "track": "partial",
+      "steps": 256,
+      "decision_interval": 16,
+      "planning_budget": null,
+      "use_memory": true,
+      "status": "completed",
+      "result": {
+        "status": "completed",
+        "steps": 256,
+        "digest": 17266894898281360390,
+        "track": "partial",
+        "controllers": [
+          "scripted",
+          "native",
+          "native",
+          "native"
+        ],
+        "decisions": 0,
+        "attempted_decisions": 0,
+        "fallbacks": 0,
+        "validation_failures": 0,
+        "decision_seconds": 0,
+        "decision_latencies": [],
+        "tool_calls": 0,
+        "final_observations": [
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 0,
+            "generation": 1,
+            "alive": false,
+            "population": 0,
+            "military": 0,
+            "infected": 0,
+            "area": 0,
+            "nodes": 20,
+            "functional_nodes": 0,
+            "stock": {
+              "wood": 1045,
+              "stone": 0,
+              "grain": 9057.025909423828,
+              "treasury": 1238.1559295654297
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 1,
+            "generation": 1,
+            "alive": true,
+            "population": 1540.3932189941406,
+            "military": 0,
+            "infected": 28.844894409179688,
+            "area": 727,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 7799.405822753906,
+              "stone": 0,
+              "grain": 35683.9940032959,
+              "treasury": 31237.811126708984
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 2,
+            "generation": 1,
+            "alive": true,
+            "population": 3173.201675415039,
+            "military": 282.880615234375,
+            "infected": 45.626678466796875,
+            "area": 2243,
+            "nodes": 92,
+            "functional_nodes": 92,
+            "stock": {
+              "wood": 12159.244415283203,
+              "stone": 771,
+              "grain": 2118.2682495117188,
+              "treasury": 56674.53665161133
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 3,
+            "generation": 1,
+            "alive": true,
+            "population": 1695.5462646484375,
+            "military": 0,
+            "infected": 31.964401245117188,
+            "area": 816,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 6994.76887512207,
+              "stone": 0,
+              "grain": 2628.5702056884766,
+              "treasury": 28977.635681152344
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          }
+        ],
+        "initial_generations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "original_generation_survival": [
+          false,
+          true,
+          true,
+          true
+        ],
+        "current_slot_alive": [
+          false,
+          true,
+          true,
+          true
+        ],
+        "estimated_cost": 0,
+        "cumulative_reserved_spend": 0,
+        "usage": []
+      }
+    },
+    {
+      "id": "104-0-llm-memory-r0",
+      "seed": 104,
+      "position": 0,
+      "repeat": 0,
+      "variant": "llm-memory",
+      "controller": "llm",
+      "scenario": "calibrated-demo-1024ticks",
+      "track": "partial",
+      "steps": 256,
+      "decision_interval": 16,
+      "planning_budget": null,
+      "use_memory": true,
+      "status": "completed",
+      "result": {
+        "status": "completed",
+        "steps": 256,
+        "digest": 17103310874380281958,
+        "track": "partial",
+        "controllers": [
+          "llm",
+          "native",
+          "native",
+          "native"
+        ],
+        "decisions": 16,
+        "attempted_decisions": 16,
+        "fallbacks": 0,
+        "validation_failures": 0,
+        "decision_seconds": 140.70501483100452,
+        "decision_latencies": [
+          8.260692272000597,
+          6.73571983599868,
+          11.506331856999168,
+          6.515864984001382,
+          10.0990979470007,
+          5.154334586999539,
+          8.566890134999994,
+          7.292843483000979,
+          6.8861819980011205,
+          6.313024951001353,
+          10.623206870999638,
+          8.569439699000213,
+          11.569971299000827,
+          10.60764688800009,
+          9.968413975999283,
+          12.035354048000954
+        ],
+        "tool_calls": 16,
+        "final_observations": [
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 0,
+            "generation": 1,
+            "alive": true,
+            "population": 2308.791793823242,
+            "military": 0,
+            "infected": 55.90269470214844,
+            "area": 1444,
+            "nodes": 26,
+            "functional_nodes": 26,
+            "stock": {
+              "wood": 19572.646286010742,
+              "stone": 0,
+              "grain": 106881.04814147949,
+              "treasury": 26512.414611816406
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 1,
+            "generation": 1,
+            "alive": true,
+            "population": 2243.3441009521484,
+            "military": 173.10333251953125,
+            "infected": 300.5717315673828,
+            "area": 1737,
+            "nodes": 86,
+            "functional_nodes": 86,
+            "stock": {
+              "wood": 6600,
+              "stone": 510,
+              "grain": 22352.091110229492,
+              "treasury": 35468.79472351074
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 2,
+            "generation": 1,
+            "alive": true,
+            "population": 31.769210815429688,
+            "military": 0,
+            "infected": 2.4692840576171875,
+            "area": 32,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 395,
+              "stone": 0,
+              "grain": 4066.7374572753906,
+              "treasury": 1070.1976165771484
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 3,
+            "generation": 1,
+            "alive": true,
+            "population": 478.4732360839844,
+            "military": 0,
+            "infected": 14.891311645507812,
+            "area": 138,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 1180,
+              "stone": 0,
+              "grain": 1919.822494506836,
+              "treasury": 9487.340728759766
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          }
+        ],
+        "initial_generations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "original_generation_survival": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "current_slot_alive": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "estimated_cost": 0.07779039999999995,
+        "cumulative_reserved_spend": 0.2381588,
+        "usage": [
+          {
+            "input_tokens": 2422,
+            "output_tokens": 275,
+            "estimated_cost": 0.0046007999999999995
+          },
+          {
+            "input_tokens": 2441,
+            "output_tokens": 384,
+            "estimated_cost": 0.005107
+          },
+          {
+            "input_tokens": 2441,
+            "output_tokens": 285,
+            "estimated_cost": 0.0046714
+          },
+          {
+            "input_tokens": 2444,
+            "output_tokens": 320,
+            "estimated_cost": 0.004829600000000001
+          },
+          {
+            "input_tokens": 2445,
+            "output_tokens": 307,
+            "estimated_cost": 0.0047738
+          },
+          {
+            "input_tokens": 2442,
+            "output_tokens": 244,
+            "estimated_cost": 0.0044924
+          },
+          {
+            "input_tokens": 2446,
+            "output_tokens": 380,
+            "estimated_cost": 0.0050964
+          },
+          {
+            "input_tokens": 2446,
+            "output_tokens": 309,
+            "estimated_cost": 0.004784
+          },
+          {
+            "input_tokens": 2443,
+            "output_tokens": 407,
+            "estimated_cost": 0.005211
+          },
+          {
+            "input_tokens": 2453,
+            "output_tokens": 336,
+            "estimated_cost": 0.0049126000000000005
+          },
+          {
+            "input_tokens": 2452,
+            "output_tokens": 260,
+            "estimated_cost": 0.004576799999999999
+          },
+          {
+            "input_tokens": 2451,
+            "output_tokens": 380,
+            "estimated_cost": 0.005103399999999999
+          },
+          {
+            "input_tokens": 2465,
+            "output_tokens": 373,
+            "estimated_cost": 0.0050922
+          },
+          {
+            "input_tokens": 2466,
+            "output_tokens": 294,
+            "estimated_cost": 0.004746
+          },
+          {
+            "input_tokens": 2465,
+            "output_tokens": 295,
+            "estimated_cost": 0.004749
+          },
+          {
+            "input_tokens": 2462,
+            "output_tokens": 363,
+            "estimated_cost": 0.005044
+          }
+        ]
+      }
+    },
+    {
+      "id": "104-0-llm-no-memory-r0",
+      "seed": 104,
+      "position": 0,
+      "repeat": 0,
+      "variant": "llm-no-memory",
+      "controller": "llm",
+      "scenario": "calibrated-demo-1024ticks",
+      "track": "partial",
+      "steps": 256,
+      "decision_interval": 16,
+      "planning_budget": null,
+      "use_memory": false,
+      "status": "completed",
+      "result": {
+        "status": "completed",
+        "steps": 256,
+        "digest": 6296010315835502080,
+        "track": "partial",
+        "controllers": [
+          "llm",
+          "native",
+          "native",
+          "native"
+        ],
+        "decisions": 16,
+        "attempted_decisions": 16,
+        "fallbacks": 0,
+        "validation_failures": 0,
+        "decision_seconds": 278.0950935980054,
+        "decision_latencies": [
+          11.602449648000402,
+          12.92932863399983,
+          10.599412464000125,
+          19.24919105400113,
+          19.270827078000366,
+          22.445169241998883,
+          13.930098033000831,
+          24.229766745000234,
+          21.92846307000036,
+          16.199646721001045,
+          20.900641543001257,
+          22.21034059500016,
+          17.542437648000487,
+          14.436555020000014,
+          9.175150585000665,
+          21.445615517999613
+        ],
+        "tool_calls": 16,
+        "final_observations": [
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 0,
+            "generation": 1,
+            "alive": true,
+            "population": 2295.627883911133,
+            "military": 0,
+            "infected": 69.47537231445312,
+            "area": 1295,
+            "nodes": 16,
+            "functional_nodes": 16,
+            "stock": {
+              "wood": 21186.779266357422,
+              "stone": 0,
+              "grain": 84147.41033935547,
+              "treasury": 19611.96923828125
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 1,
+            "generation": 1,
+            "alive": true,
+            "population": 2254.8131408691406,
+            "military": 173.72669982910156,
+            "infected": 301.3670349121094,
+            "area": 1848,
+            "nodes": 96,
+            "functional_nodes": 96,
+            "stock": {
+              "wood": 6380,
+              "stone": 430,
+              "grain": 23529.927200317383,
+              "treasury": 35496.12771606445
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 2,
+            "generation": 1,
+            "alive": true,
+            "population": 31.769210815429688,
+            "military": 0,
+            "infected": 2.4692840576171875,
+            "area": 32,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 395,
+              "stone": 0,
+              "grain": 4066.7374572753906,
+              "treasury": 1070.1976165771484
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 3,
+            "generation": 1,
+            "alive": true,
+            "population": 477.6070861816406,
+            "military": 0,
+            "infected": 14.92718505859375,
+            "area": 176,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 1205,
+              "stone": 0,
+              "grain": 2297.916763305664,
+              "treasury": 9478.040283203125
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          }
+        ],
+        "initial_generations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "original_generation_survival": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "current_slot_alive": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "estimated_cost": 0.08014679999999996,
+        "cumulative_reserved_spend": 0.31830559999999997,
+        "usage": [
+          {
+            "input_tokens": 2422,
+            "output_tokens": 282,
+            "estimated_cost": 0.0046316000000000005
+          },
+          {
+            "input_tokens": 2441,
+            "output_tokens": 304,
+            "estimated_cost": 0.004755
+          },
+          {
+            "input_tokens": 2443,
+            "output_tokens": 272,
+            "estimated_cost": 0.004617
+          },
+          {
+            "input_tokens": 2443,
+            "output_tokens": 291,
+            "estimated_cost": 0.0047006
+          },
+          {
+            "input_tokens": 2445,
+            "output_tokens": 326,
+            "estimated_cost": 0.0048573999999999996
+          },
+          {
+            "input_tokens": 2445,
+            "output_tokens": 453,
+            "estimated_cost": 0.0054162
+          },
+          {
+            "input_tokens": 2448,
+            "output_tokens": 459,
+            "estimated_cost": 0.0054468
+          },
+          {
+            "input_tokens": 2444,
+            "output_tokens": 295,
+            "estimated_cost": 0.0047196
+          },
+          {
+            "input_tokens": 2445,
+            "output_tokens": 449,
+            "estimated_cost": 0.005398600000000001
+          },
+          {
+            "input_tokens": 2452,
+            "output_tokens": 395,
+            "estimated_cost": 0.005170800000000001
+          },
+          {
+            "input_tokens": 2453,
+            "output_tokens": 291,
+            "estimated_cost": 0.0047146
+          },
+          {
+            "input_tokens": 2455,
+            "output_tokens": 365,
+            "estimated_cost": 0.005043
+          },
+          {
+            "input_tokens": 2462,
+            "output_tokens": 380,
+            "estimated_cost": 0.005118800000000001
+          },
+          {
+            "input_tokens": 2464,
+            "output_tokens": 418,
+            "estimated_cost": 0.0052888
+          },
+          {
+            "input_tokens": 2467,
+            "output_tokens": 326,
+            "estimated_cost": 0.0048882
+          },
+          {
+            "input_tokens": 2463,
+            "output_tokens": 439,
+            "estimated_cost": 0.0053798000000000006
+          }
+        ]
+      }
+    },
+    {
+      "id": "104-0-scripted-r0",
+      "seed": 104,
+      "position": 0,
+      "repeat": 0,
+      "variant": "scripted",
+      "controller": "scripted",
+      "scenario": "calibrated-demo-1024ticks",
+      "track": "partial",
+      "steps": 256,
+      "decision_interval": 16,
+      "planning_budget": null,
+      "use_memory": true,
+      "status": "completed",
+      "result": {
+        "status": "completed",
+        "steps": 256,
+        "digest": 12328353866910548742,
+        "track": "partial",
+        "controllers": [
+          "scripted",
+          "native",
+          "native",
+          "native"
+        ],
+        "decisions": 0,
+        "attempted_decisions": 0,
+        "fallbacks": 0,
+        "validation_failures": 0,
+        "decision_seconds": 0,
+        "decision_latencies": [],
+        "tool_calls": 0,
+        "final_observations": [
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 0,
+            "generation": 2,
+            "alive": false,
+            "population": 0,
+            "military": 0,
+            "infected": 0,
+            "area": 0,
+            "nodes": 30,
+            "functional_nodes": 0,
+            "stock": {
+              "wood": 196.2880401611328,
+              "stone": 150,
+              "grain": 255.7817840576172,
+              "treasury": 257.9855651855469
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 1,
+            "generation": 1,
+            "alive": true,
+            "population": 2848.9488067626953,
+            "military": 211.7464599609375,
+            "infected": 347.970947265625,
+            "area": 2761,
+            "nodes": 82,
+            "functional_nodes": 82,
+            "stock": {
+              "wood": 11365,
+              "stone": 510,
+              "grain": 73220.97639465332,
+              "treasury": 37970.2735748291
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 2,
+            "generation": 1,
+            "alive": true,
+            "population": 31.769210815429688,
+            "military": 0,
+            "infected": 2.4692840576171875,
+            "area": 32,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 395,
+              "stone": 0,
+              "grain": 4066.7374572753906,
+              "treasury": 1070.1976165771484
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 3,
+            "generation": 1,
+            "alive": true,
+            "population": 755.2744293212891,
+            "military": 0,
+            "infected": 22.985626220703125,
+            "area": 536,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 4130,
+              "stone": 0,
+              "grain": 30209.589874267578,
+              "treasury": 11361.984191894531
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          }
+        ],
+        "initial_generations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "original_generation_survival": [
+          false,
+          true,
+          true,
+          true
+        ],
+        "current_slot_alive": [
+          false,
+          true,
+          true,
+          true
+        ],
+        "estimated_cost": 0,
+        "cumulative_reserved_spend": 0,
+        "usage": []
+      }
+    },
+    {
+      "id": "101-1-llm-memory-r0",
+      "seed": 101,
+      "position": 1,
+      "repeat": 0,
+      "variant": "llm-memory",
+      "controller": "llm",
+      "scenario": "calibrated-demo-1024ticks",
+      "track": "partial",
+      "steps": 256,
+      "decision_interval": 16,
+      "planning_budget": null,
+      "use_memory": true,
+      "status": "completed",
+      "result": {
+        "status": "completed",
+        "steps": 256,
+        "digest": 8743315820413023954,
+        "track": "partial",
+        "controllers": [
+          "native",
+          "llm",
+          "native",
+          "native"
+        ],
+        "decisions": 16,
+        "attempted_decisions": 16,
+        "fallbacks": 0,
+        "validation_failures": 0,
+        "decision_seconds": 205.2078234130022,
+        "decision_latencies": [
+          9.284023852000246,
+          17.130774380999355,
+          16.5404382730012,
+          16.318472655000733,
+          17.301124944999174,
+          14.660738605000006,
+          15.678701251999883,
+          20.02330452299975,
+          9.694501973001024,
+          8.977893568000582,
+          7.024188498999138,
+          11.684183542000028,
+          8.612658866000857,
+          8.63908070999969,
+          11.976294754000264,
+          11.661443015000259
+        ],
+        "tool_calls": 16,
+        "final_observations": [
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 0,
+            "generation": 1,
+            "alive": true,
+            "population": 3436.502655029297,
+            "military": 179.43673706054688,
+            "infected": 58.03010559082031,
+            "area": 3619,
+            "nodes": 61,
+            "functional_nodes": 61,
+            "stock": {
+              "wood": 8643.992553710938,
+              "stone": 1007,
+              "grain": 2905.736053466797,
+              "treasury": 52035.92289733887
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 1,
+            "generation": 1,
+            "alive": true,
+            "population": 1032.0139923095703,
+            "military": 0,
+            "infected": 18.87017822265625,
+            "area": 323,
+            "nodes": 16,
+            "functional_nodes": 16,
+            "stock": {
+              "wood": 3547.5403442382812,
+              "stone": 0,
+              "grain": 1297.802505493164,
+              "treasury": 3265.9530029296875
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 2,
+            "generation": 1,
+            "alive": true,
+            "population": 1.329498291015625,
+            "military": 22.48223876953125,
+            "infected": 0.6143798828125,
+            "area": 0,
+            "nodes": 43,
+            "functional_nodes": 42,
+            "stock": {
+              "wood": 4361.236053466797,
+              "stone": 282,
+              "grain": 0,
+              "treasury": 21645.07452392578
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 3,
+            "generation": 1,
+            "alive": false,
+            "population": 0,
+            "military": 0,
+            "infected": 0,
+            "area": 10,
+            "nodes": 8,
+            "functional_nodes": 0,
+            "stock": {
+              "wood": 3209.7616271972656,
+              "stone": 3,
+              "grain": 0,
+              "treasury": 16264.634368896484
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          }
+        ],
+        "initial_generations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "original_generation_survival": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "current_slot_alive": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "estimated_cost": 0.08363420000000002,
+        "cumulative_reserved_spend": 0.08363420000000002,
+        "usage": [
+          {
+            "input_tokens": 2423,
+            "output_tokens": 305,
+            "estimated_cost": 0.0047342
+          },
+          {
+            "input_tokens": 2443,
+            "output_tokens": 539,
+            "estimated_cost": 0.005791800000000001
+          },
+          {
+            "input_tokens": 2440,
+            "output_tokens": 302,
+            "estimated_cost": 0.0047448
+          },
+          {
+            "input_tokens": 2444,
+            "output_tokens": 338,
+            "estimated_cost": 0.0049088000000000005
+          },
+          {
+            "input_tokens": 2445,
+            "output_tokens": 384,
+            "estimated_cost": 0.0051126
+          },
+          {
+            "input_tokens": 2458,
+            "output_tokens": 368,
+            "estimated_cost": 0.0050604
+          },
+          {
+            "input_tokens": 2464,
+            "output_tokens": 425,
+            "estimated_cost": 0.005319600000000001
+          },
+          {
+            "input_tokens": 2465,
+            "output_tokens": 384,
+            "estimated_cost": 0.0051406
+          },
+          {
+            "input_tokens": 2461,
+            "output_tokens": 411,
+            "estimated_cost": 0.0052537999999999994
+          },
+          {
+            "input_tokens": 2466,
+            "output_tokens": 479,
+            "estimated_cost": 0.00556
+          },
+          {
+            "input_tokens": 2464,
+            "output_tokens": 387,
+            "estimated_cost": 0.0051524
+          },
+          {
+            "input_tokens": 2466,
+            "output_tokens": 383,
+            "estimated_cost": 0.005137599999999999
+          },
+          {
+            "input_tokens": 2465,
+            "output_tokens": 420,
+            "estimated_cost": 0.005299
+          },
+          {
+            "input_tokens": 2466,
+            "output_tokens": 517,
+            "estimated_cost": 0.0057272
+          },
+          {
+            "input_tokens": 2467,
+            "output_tokens": 402,
+            "estimated_cost": 0.0052226
+          },
+          {
+            "input_tokens": 2470,
+            "output_tokens": 457,
+            "estimated_cost": 0.0054688
+          }
+        ]
+      }
+    },
+    {
+      "id": "101-1-llm-no-memory-r0",
+      "seed": 101,
+      "position": 1,
+      "repeat": 0,
+      "variant": "llm-no-memory",
+      "controller": "llm",
+      "scenario": "calibrated-demo-1024ticks",
+      "track": "partial",
+      "steps": 256,
+      "decision_interval": 16,
+      "planning_budget": null,
+      "use_memory": false,
+      "status": "completed",
+      "result": {
+        "status": "completed",
+        "steps": 256,
+        "digest": 4419269367662958696,
+        "track": "partial",
+        "controllers": [
+          "native",
+          "llm",
+          "native",
+          "native"
+        ],
+        "decisions": 16,
+        "attempted_decisions": 16,
+        "fallbacks": 0,
+        "validation_failures": 0,
+        "decision_seconds": 196.5154762999955,
+        "decision_latencies": [
+          5.946748340998965,
+          11.04122715000085,
+          12.807251988999269,
+          8.020140548998825,
+          8.785636783999507,
+          9.062156785999832,
+          8.894675534998896,
+          7.216531203001068,
+          12.315731118000258,
+          26.241158766000808,
+          15.038506913000674,
+          11.987616009000703,
+          12.046138726998834,
+          10.843770452998797,
+          19.869330014998923,
+          16.39885596199929
+        ],
+        "tool_calls": 17,
+        "final_observations": [
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 0,
+            "generation": 1,
+            "alive": true,
+            "population": 2124.0970306396484,
+            "military": 105.8077392578125,
+            "infected": 30.067718505859375,
+            "area": 2573,
+            "nodes": 60,
+            "functional_nodes": 60,
+            "stock": {
+              "wood": 7668.740692138672,
+              "stone": 936,
+              "grain": 0,
+              "treasury": 50213.111404418945
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 1,
+            "generation": 1,
+            "alive": true,
+            "population": 1503.6147918701172,
+            "military": 0,
+            "infected": 26.454421997070312,
+            "area": 1387,
+            "nodes": 18,
+            "functional_nodes": 18,
+            "stock": {
+              "wood": 5559.929779052734,
+              "stone": 10,
+              "grain": 2207.686065673828,
+              "treasury": 11257.493133544922
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 2,
+            "generation": 1,
+            "alive": true,
+            "population": 0.889801025390625,
+            "military": 19.47216796875,
+            "infected": 0.488037109375,
+            "area": 0,
+            "nodes": 42,
+            "functional_nodes": 42,
+            "stock": {
+              "wood": 3992.485366821289,
+              "stone": 272,
+              "grain": 0,
+              "treasury": 20736.496292114258
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 3,
+            "generation": 1,
+            "alive": false,
+            "population": 0,
+            "military": 0,
+            "infected": 0,
+            "area": 0,
+            "nodes": 8,
+            "functional_nodes": 0,
+            "stock": {
+              "wood": 3084.9535217285156,
+              "stone": 3,
+              "grain": 0,
+              "treasury": 15575.352188110352
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          }
+        ],
+        "initial_generations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "original_generation_survival": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "current_slot_alive": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "estimated_cost": 0.08631779999999997,
+        "cumulative_reserved_spend": 0.169952,
+        "usage": [
+          {
+            "input_tokens": 2423,
+            "output_tokens": 303,
+            "estimated_cost": 0.004725399999999999
+          },
+          {
+            "input_tokens": 2443,
+            "output_tokens": 79,
+            "estimated_cost": 0.0037677999999999995
+          },
+          {
+            "input_tokens": 2702,
+            "output_tokens": 471,
+            "estimated_cost": 0.0058552
+          },
+          {
+            "input_tokens": 2441,
+            "output_tokens": 408,
+            "estimated_cost": 0.0052125999999999995
+          },
+          {
+            "input_tokens": 2440,
+            "output_tokens": 331,
+            "estimated_cost": 0.0048724
+          },
+          {
+            "input_tokens": 2444,
+            "output_tokens": 322,
+            "estimated_cost": 0.0048384
+          },
+          {
+            "input_tokens": 2465,
+            "output_tokens": 360,
+            "estimated_cost": 0.005035
+          },
+          {
+            "input_tokens": 2462,
+            "output_tokens": 474,
+            "estimated_cost": 0.0055324
+          },
+          {
+            "input_tokens": 2462,
+            "output_tokens": 351,
+            "estimated_cost": 0.0049911999999999995
+          },
+          {
+            "input_tokens": 2462,
+            "output_tokens": 351,
+            "estimated_cost": 0.0049911999999999995
+          },
+          {
+            "input_tokens": 2465,
+            "output_tokens": 490,
+            "estimated_cost": 0.005607
+          },
+          {
+            "input_tokens": 2465,
+            "output_tokens": 381,
+            "estimated_cost": 0.0051274
+          },
+          {
+            "input_tokens": 2465,
+            "output_tokens": 287,
+            "estimated_cost": 0.0047138
+          },
+          {
+            "input_tokens": 2463,
+            "output_tokens": 329,
+            "estimated_cost": 0.0048958000000000005
+          },
+          {
+            "input_tokens": 2468,
+            "output_tokens": 348,
+            "estimated_cost": 0.004986399999999999
+          },
+          {
+            "input_tokens": 2460,
+            "output_tokens": 513,
+            "estimated_cost": 0.005701200000000001
+          },
+          {
+            "input_tokens": 2467,
+            "output_tokens": 457,
+            "estimated_cost": 0.0054646
+          }
+        ]
+      }
+    },
+    {
+      "id": "101-1-scripted-r0",
+      "seed": 101,
+      "position": 1,
+      "repeat": 0,
+      "variant": "scripted",
+      "controller": "scripted",
+      "scenario": "calibrated-demo-1024ticks",
+      "track": "partial",
+      "steps": 256,
+      "decision_interval": 16,
+      "planning_budget": null,
+      "use_memory": true,
+      "status": "completed",
+      "result": {
+        "status": "completed",
+        "steps": 256,
+        "digest": 4725712184385105667,
+        "track": "partial",
+        "controllers": [
+          "native",
+          "scripted",
+          "native",
+          "native"
+        ],
+        "decisions": 0,
+        "attempted_decisions": 0,
+        "fallbacks": 0,
+        "validation_failures": 0,
+        "decision_seconds": 0,
+        "decision_latencies": [],
+        "tool_calls": 0,
+        "final_observations": [
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 0,
+            "generation": 1,
+            "alive": true,
+            "population": 826.3827056884766,
+            "military": 114.95417785644531,
+            "infected": 0.9717864990234375,
+            "area": 878,
+            "nodes": 50,
+            "functional_nodes": 50,
+            "stock": {
+              "wood": 6063.9925537109375,
+              "stone": 526,
+              "grain": 0,
+              "treasury": 45171.724868774414
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 1,
+            "generation": 1,
+            "alive": false,
+            "population": 0,
+            "military": 0,
+            "infected": 0,
+            "area": 0,
+            "nodes": 37,
+            "functional_nodes": 0,
+            "stock": {
+              "wood": 459.6024627685547,
+              "stone": 0,
+              "grain": 2282.069869995117,
+              "treasury": 2261.9091033935547
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 2,
+            "generation": 1,
+            "alive": true,
+            "population": 2745.2836151123047,
+            "military": 62.457855224609375,
+            "infected": 128.2508544921875,
+            "area": 2999,
+            "nodes": 33,
+            "functional_nodes": 33,
+            "stock": {
+              "wood": 9247.529846191406,
+              "stone": 882,
+              "grain": 5407.076965332031,
+              "treasury": 38764.21467590332
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 3,
+            "generation": 1,
+            "alive": false,
+            "population": 0,
+            "military": 0,
+            "infected": 0,
+            "area": 36,
+            "nodes": 8,
+            "functional_nodes": 0,
+            "stock": {
+              "wood": 3189.7936096191406,
+              "stone": 3,
+              "grain": 0,
+              "treasury": 15914.549346923828
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          }
+        ],
+        "initial_generations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "original_generation_survival": [
+          true,
+          false,
+          true,
+          false
+        ],
+        "current_slot_alive": [
+          true,
+          false,
+          true,
+          false
+        ],
+        "estimated_cost": 0,
+        "cumulative_reserved_spend": 0,
+        "usage": []
+      }
+    },
+    {
+      "id": "102-2-llm-memory-r0",
+      "seed": 102,
+      "position": 2,
+      "repeat": 0,
+      "variant": "llm-memory",
+      "controller": "llm",
+      "scenario": "calibrated-demo-1024ticks",
+      "track": "partial",
+      "steps": 256,
+      "decision_interval": 16,
+      "planning_budget": null,
+      "use_memory": true,
+      "status": "completed",
+      "result": {
+        "status": "completed",
+        "steps": 256,
+        "digest": 7823962529260099561,
+        "track": "partial",
+        "controllers": [
+          "native",
+          "native",
+          "llm",
+          "native"
+        ],
+        "decisions": 16,
+        "attempted_decisions": 16,
+        "fallbacks": 0,
+        "validation_failures": 0,
+        "decision_seconds": 226.29192104700633,
+        "decision_latencies": [
+          12.038109638000606,
+          17.021661179000148,
+          25.57268051200117,
+          12.232547088000501,
+          10.439448343999175,
+          8.533481380998637,
+          8.363622246999512,
+          29.499765460001072,
+          9.80824736499926,
+          8.053589820001434,
+          7.123632775999795,
+          13.496200025001599,
+          11.50877061600113,
+          26.847941052999886,
+          13.460436504001336,
+          12.291787039001065
+        ],
+        "tool_calls": 16,
+        "final_observations": [
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 0,
+            "generation": 1,
+            "alive": true,
+            "population": 255.04397583007812,
+            "military": 221.9452667236328,
+            "infected": 0,
+            "area": 13,
+            "nodes": 81,
+            "functional_nodes": 81,
+            "stock": {
+              "wood": 4430,
+              "stone": 178,
+              "grain": 0,
+              "treasury": 43012.71366882324
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 1,
+            "generation": 1,
+            "alive": true,
+            "population": 1995.0910339355469,
+            "military": 0,
+            "infected": 0,
+            "area": 1450,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 7300,
+              "stone": 0,
+              "grain": 8992.033630371094,
+              "treasury": 37510.51989746094
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 2,
+            "generation": 1,
+            "alive": true,
+            "population": 3547.7929077148438,
+            "military": 0,
+            "infected": 68.15646362304688,
+            "area": 2544,
+            "nodes": 31,
+            "functional_nodes": 13,
+            "stock": {
+              "wood": 21684.52149963379,
+              "stone": 285,
+              "grain": 5172.944778442383,
+              "treasury": 30919.7921295166
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 3,
+            "generation": 1,
+            "alive": false,
+            "population": 0,
+            "military": 0,
+            "infected": 0,
+            "area": 0,
+            "nodes": 8,
+            "functional_nodes": 0,
+            "stock": {
+              "wood": 2700,
+              "stone": 0,
+              "grain": 0,
+              "treasury": 19873.184310913086
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          }
+        ],
+        "initial_generations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "original_generation_survival": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "current_slot_alive": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "estimated_cost": 0.0839098,
+        "cumulative_reserved_spend": 0.0839098,
+        "usage": [
+          {
+            "input_tokens": 2422,
+            "output_tokens": 350,
+            "estimated_cost": 0.0049308
+          },
+          {
+            "input_tokens": 2444,
+            "output_tokens": 465,
+            "estimated_cost": 0.0054676
+          },
+          {
+            "input_tokens": 2443,
+            "output_tokens": 389,
+            "estimated_cost": 0.005131800000000001
+          },
+          {
+            "input_tokens": 2445,
+            "output_tokens": 384,
+            "estimated_cost": 0.0051126
+          },
+          {
+            "input_tokens": 2444,
+            "output_tokens": 307,
+            "estimated_cost": 0.0047723999999999996
+          },
+          {
+            "input_tokens": 2443,
+            "output_tokens": 344,
+            "estimated_cost": 0.0049338
+          },
+          {
+            "input_tokens": 2446,
+            "output_tokens": 354,
+            "estimated_cost": 0.004982
+          },
+          {
+            "input_tokens": 2446,
+            "output_tokens": 441,
+            "estimated_cost": 0.005364799999999999
+          },
+          {
+            "input_tokens": 2452,
+            "output_tokens": 506,
+            "estimated_cost": 0.0056592
+          },
+          {
+            "input_tokens": 2454,
+            "output_tokens": 305,
+            "estimated_cost": 0.004777600000000001
+          },
+          {
+            "input_tokens": 2463,
+            "output_tokens": 351,
+            "estimated_cost": 0.004992600000000001
+          },
+          {
+            "input_tokens": 2463,
+            "output_tokens": 405,
+            "estimated_cost": 0.0052302
+          },
+          {
+            "input_tokens": 2467,
+            "output_tokens": 437,
+            "estimated_cost": 0.0053766000000000005
+          },
+          {
+            "input_tokens": 2462,
+            "output_tokens": 521,
+            "estimated_cost": 0.0057392
+          },
+          {
+            "input_tokens": 2465,
+            "output_tokens": 589,
+            "estimated_cost": 0.0060426
+          },
+          {
+            "input_tokens": 2462,
+            "output_tokens": 443,
+            "estimated_cost": 0.005396
+          }
+        ]
+      }
+    },
+    {
+      "id": "102-2-llm-no-memory-r0",
+      "seed": 102,
+      "position": 2,
+      "repeat": 0,
+      "variant": "llm-no-memory",
+      "controller": "llm",
+      "scenario": "calibrated-demo-1024ticks",
+      "track": "partial",
+      "steps": 256,
+      "decision_interval": 16,
+      "planning_budget": null,
+      "use_memory": false,
+      "status": "completed",
+      "result": {
+        "status": "completed",
+        "steps": 256,
+        "digest": 13473137974023548346,
+        "track": "partial",
+        "controllers": [
+          "native",
+          "native",
+          "llm",
+          "native"
+        ],
+        "decisions": 16,
+        "attempted_decisions": 16,
+        "fallbacks": 0,
+        "validation_failures": 0,
+        "decision_seconds": 166.02881539000555,
+        "decision_latencies": [
+          5.2932233339997765,
+          5.552179451999109,
+          8.618635902001188,
+          11.288950861000558,
+          11.21263426599944,
+          13.25919816700116,
+          11.301960822000183,
+          15.210688588000266,
+          12.69639374200051,
+          10.483654898000168,
+          12.454558848001398,
+          13.527039661001254,
+          9.640582657000778,
+          7.647099534999143,
+          6.61208731700026,
+          11.229927340000359
+        ],
+        "tool_calls": 16,
+        "final_observations": [
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 0,
+            "generation": 1,
+            "alive": true,
+            "population": 317.27867126464844,
+            "military": 227.79248046875,
+            "infected": 0,
+            "area": 23,
+            "nodes": 69,
+            "functional_nodes": 69,
+            "stock": {
+              "wood": 4855,
+              "stone": 269,
+              "grain": 0,
+              "treasury": 43878.24092102051
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 1,
+            "generation": 1,
+            "alive": true,
+            "population": 2015.1587677001953,
+            "military": 0,
+            "infected": 0,
+            "area": 1418,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 7370,
+              "stone": 0,
+              "grain": 9665.566390991211,
+              "treasury": 37394.20216369629
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 2,
+            "generation": 1,
+            "alive": true,
+            "population": 3501.390609741211,
+            "military": 0,
+            "infected": 46.50358581542969,
+            "area": 2566,
+            "nodes": 43,
+            "functional_nodes": 13,
+            "stock": {
+              "wood": 20002.719985961914,
+              "stone": 198,
+              "grain": 4348.8682861328125,
+              "treasury": 32300.09112548828
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 3,
+            "generation": 1,
+            "alive": false,
+            "population": 0,
+            "military": 0,
+            "infected": 0,
+            "area": 0,
+            "nodes": 8,
+            "functional_nodes": 0,
+            "stock": {
+              "wood": 2645,
+              "stone": 0,
+              "grain": 0,
+              "treasury": 19897.04931640625
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          }
+        ],
+        "initial_generations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "original_generation_survival": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "current_slot_alive": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "estimated_cost": 0.08082339999999996,
+        "cumulative_reserved_spend": 0.16473319999999997,
+        "usage": [
+          {
+            "input_tokens": 2422,
+            "output_tokens": 265,
+            "estimated_cost": 0.004556799999999999
+          },
+          {
+            "input_tokens": 2442,
+            "output_tokens": 318,
+            "estimated_cost": 0.004818
+          },
+          {
+            "input_tokens": 2440,
+            "output_tokens": 428,
+            "estimated_cost": 0.0052992
+          },
+          {
+            "input_tokens": 2446,
+            "output_tokens": 281,
+            "estimated_cost": 0.0046608
+          },
+          {
+            "input_tokens": 2446,
+            "output_tokens": 358,
+            "estimated_cost": 0.0049996
+          },
+          {
+            "input_tokens": 2442,
+            "output_tokens": 478,
+            "estimated_cost": 0.005522
+          },
+          {
+            "input_tokens": 2447,
+            "output_tokens": 409,
+            "estimated_cost": 0.0052254
+          },
+          {
+            "input_tokens": 2442,
+            "output_tokens": 378,
+            "estimated_cost": 0.005082
+          },
+          {
+            "input_tokens": 2452,
+            "output_tokens": 393,
+            "estimated_cost": 0.005162
+          },
+          {
+            "input_tokens": 2454,
+            "output_tokens": 377,
+            "estimated_cost": 0.0050944
+          },
+          {
+            "input_tokens": 2461,
+            "output_tokens": 424,
+            "estimated_cost": 0.005311
+          },
+          {
+            "input_tokens": 2462,
+            "output_tokens": 389,
+            "estimated_cost": 0.0051584
+          },
+          {
+            "input_tokens": 2466,
+            "output_tokens": 371,
+            "estimated_cost": 0.0050847999999999996
+          },
+          {
+            "input_tokens": 2461,
+            "output_tokens": 343,
+            "estimated_cost": 0.004954599999999999
+          },
+          {
+            "input_tokens": 2463,
+            "output_tokens": 334,
+            "estimated_cost": 0.0049178
+          },
+          {
+            "input_tokens": 2461,
+            "output_tokens": 348,
+            "estimated_cost": 0.004976599999999999
+          }
+        ]
+      }
+    },
+    {
+      "id": "102-2-scripted-r0",
+      "seed": 102,
+      "position": 2,
+      "repeat": 0,
+      "variant": "scripted",
+      "controller": "scripted",
+      "scenario": "calibrated-demo-1024ticks",
+      "track": "partial",
+      "steps": 256,
+      "decision_interval": 16,
+      "planning_budget": null,
+      "use_memory": true,
+      "status": "completed",
+      "result": {
+        "status": "completed",
+        "steps": 256,
+        "digest": 14356777526751177327,
+        "track": "partial",
+        "controllers": [
+          "native",
+          "native",
+          "scripted",
+          "native"
+        ],
+        "decisions": 0,
+        "attempted_decisions": 0,
+        "fallbacks": 0,
+        "validation_failures": 0,
+        "decision_seconds": 0,
+        "decision_latencies": [],
+        "tool_calls": 0,
+        "final_observations": [
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 0,
+            "generation": 1,
+            "alive": true,
+            "population": 3369.1097869873047,
+            "military": 575.6941528320312,
+            "infected": 0,
+            "area": 1891,
+            "nodes": 68,
+            "functional_nodes": 68,
+            "stock": {
+              "wood": 10600,
+              "stone": 354,
+              "grain": 12260.13754272461,
+              "treasury": 58434.06588745117
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 1,
+            "generation": 1,
+            "alive": true,
+            "population": 2348.5025177001953,
+            "military": 0,
+            "infected": 0,
+            "area": 2116,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 9116.36799621582,
+              "stone": 0,
+              "grain": 11531.641098022461,
+              "treasury": 41330.43049621582
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 2,
+            "generation": 1,
+            "alive": false,
+            "population": 0,
+            "military": 0,
+            "infected": 0,
+            "area": 0,
+            "nodes": 44,
+            "functional_nodes": 0,
+            "stock": {
+              "wood": 4563.355651855469,
+              "stone": 0,
+              "grain": 7656.774475097656,
+              "treasury": 7652.936630249023
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 3,
+            "generation": 1,
+            "alive": false,
+            "population": 0,
+            "military": 0,
+            "infected": 0,
+            "area": 0,
+            "nodes": 8,
+            "functional_nodes": 0,
+            "stock": {
+              "wood": 3282.005645751953,
+              "stone": 69,
+              "grain": 0,
+              "treasury": 24994.6572265625
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          }
+        ],
+        "initial_generations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "original_generation_survival": [
+          true,
+          true,
+          false,
+          false
+        ],
+        "current_slot_alive": [
+          true,
+          true,
+          false,
+          false
+        ],
+        "estimated_cost": 0,
+        "cumulative_reserved_spend": 0,
+        "usage": []
+      }
+    },
+    {
+      "id": "103-3-llm-memory-r0",
+      "seed": 103,
+      "position": 3,
+      "repeat": 0,
+      "variant": "llm-memory",
+      "controller": "llm",
+      "scenario": "calibrated-demo-1024ticks",
+      "track": "partial",
+      "steps": 256,
+      "decision_interval": 16,
+      "planning_budget": null,
+      "use_memory": true,
+      "status": "completed",
+      "result": {
+        "status": "completed",
+        "steps": 256,
+        "digest": 15090604432363581485,
+        "track": "partial",
+        "controllers": [
+          "native",
+          "native",
+          "native",
+          "llm"
+        ],
+        "decisions": 16,
+        "attempted_decisions": 16,
+        "fallbacks": 0,
+        "validation_failures": 0,
+        "decision_seconds": 267.96494871600044,
+        "decision_latencies": [
+          9.975998996998896,
+          7.475323185999514,
+          14.360803469999155,
+          9.42048326800068,
+          6.662144990999877,
+          6.9524617650004075,
+          12.043876867001018,
+          10.125103849999505,
+          12.388606679998702,
+          18.182168434999767,
+          11.433361289999084,
+          61.02821271200082,
+          11.19209885500095,
+          21.649294213000758,
+          42.55999732000055,
+          12.515012817000752
+        ],
+        "tool_calls": 18,
+        "final_observations": [
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 0,
+            "generation": 1,
+            "alive": true,
+            "population": 1996.1282806396484,
+            "military": 0,
+            "infected": 0,
+            "area": 1497,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 6030,
+              "stone": 0,
+              "grain": 20456.405059814453,
+              "treasury": 28975.638763427734
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 1,
+            "generation": 1,
+            "alive": false,
+            "population": 0,
+            "military": 0,
+            "infected": 0,
+            "area": 0,
+            "nodes": 8,
+            "functional_nodes": 0,
+            "stock": {
+              "wood": 1000,
+              "stone": 0,
+              "grain": 0,
+              "treasury": 9338.05029296875
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 2,
+            "generation": 1,
+            "alive": true,
+            "population": 182.91001892089844,
+            "military": 0,
+            "infected": 0.912353515625,
+            "area": 238,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 8755,
+              "stone": 0,
+              "grain": 0,
+              "treasury": 44791.12113952637
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 3,
+            "generation": 1,
+            "alive": true,
+            "population": 2601.7691192626953,
+            "military": 0,
+            "infected": 39.27174377441406,
+            "area": 2002,
+            "nodes": 37,
+            "functional_nodes": 36,
+            "stock": {
+              "wood": 14320,
+              "stone": 0,
+              "grain": 5667.966110229492,
+              "treasury": 22194.144592285156
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          }
+        ],
+        "initial_generations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "original_generation_survival": [
+          true,
+          false,
+          true,
+          true
+        ],
+        "current_slot_alive": [
+          true,
+          false,
+          true,
+          true
+        ],
+        "estimated_cost": 0.0894266,
+        "cumulative_reserved_spend": 0.0894266,
+        "usage": [
+          {
+            "input_tokens": 2422,
+            "output_tokens": 302,
+            "estimated_cost": 0.0047196
+          },
+          {
+            "input_tokens": 2443,
+            "output_tokens": 278,
+            "estimated_cost": 0.0046434
+          },
+          {
+            "input_tokens": 2442,
+            "output_tokens": 59,
+            "estimated_cost": 0.0036783999999999996
+          },
+          {
+            "input_tokens": 2680,
+            "output_tokens": 12,
+            "estimated_cost": 0.0038047999999999997
+          },
+          {
+            "input_tokens": 3283,
+            "output_tokens": 385,
+            "estimated_cost": 0.0062902
+          },
+          {
+            "input_tokens": 2444,
+            "output_tokens": 412,
+            "estimated_cost": 0.005234399999999999
+          },
+          {
+            "input_tokens": 2442,
+            "output_tokens": 311,
+            "estimated_cost": 0.0047872
+          },
+          {
+            "input_tokens": 2453,
+            "output_tokens": 342,
+            "estimated_cost": 0.004939
+          },
+          {
+            "input_tokens": 2455,
+            "output_tokens": 416,
+            "estimated_cost": 0.005267399999999999
+          },
+          {
+            "input_tokens": 2456,
+            "output_tokens": 356,
+            "estimated_cost": 0.005004799999999999
+          },
+          {
+            "input_tokens": 2454,
+            "output_tokens": 404,
+            "estimated_cost": 0.005213199999999999
+          },
+          {
+            "input_tokens": 2453,
+            "output_tokens": 340,
+            "estimated_cost": 0.0049302
+          },
+          {
+            "input_tokens": 2450,
+            "output_tokens": 414,
+            "estimated_cost": 0.0052516
+          },
+          {
+            "input_tokens": 2457,
+            "output_tokens": 345,
+            "estimated_cost": 0.0049578
+          },
+          {
+            "input_tokens": 2454,
+            "output_tokens": 335,
+            "estimated_cost": 0.0049096
+          },
+          {
+            "input_tokens": 2456,
+            "output_tokens": 426,
+            "estimated_cost": 0.0053127999999999995
+          },
+          {
+            "input_tokens": 2456,
+            "output_tokens": 368,
+            "estimated_cost": 0.0050576
+          },
+          {
+            "input_tokens": 2451,
+            "output_tokens": 453,
+            "estimated_cost": 0.005424600000000001
+          }
+        ]
+      }
+    },
+    {
+      "id": "103-3-llm-no-memory-r0",
+      "seed": 103,
+      "position": 3,
+      "repeat": 0,
+      "variant": "llm-no-memory",
+      "controller": "llm",
+      "scenario": "calibrated-demo-1024ticks",
+      "track": "partial",
+      "steps": 256,
+      "decision_interval": 16,
+      "planning_budget": null,
+      "use_memory": false,
+      "status": "completed",
+      "result": {
+        "status": "completed",
+        "steps": 256,
+        "digest": 18146074947475920003,
+        "track": "partial",
+        "controllers": [
+          "native",
+          "native",
+          "native",
+          "llm"
+        ],
+        "decisions": 16,
+        "attempted_decisions": 16,
+        "fallbacks": 0,
+        "validation_failures": 1,
+        "decision_seconds": 317.4726333609997,
+        "decision_latencies": [
+          8.842348059999495,
+          16.939373699000498,
+          17.66975179599831,
+          13.674356580999302,
+          17.745030241001587,
+          15.98740474099941,
+          25.249364309000157,
+          17.851260139999795,
+          20.502155967000363,
+          58.93987999099954,
+          9.665735532000326,
+          16.95039564599938,
+          15.808316495000327,
+          28.298431622000862,
+          12.842201711000598,
+          20.506626829999732
+        ],
+        "tool_calls": 18,
+        "final_observations": [
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 0,
+            "generation": 1,
+            "alive": true,
+            "population": 1880.8863220214844,
+            "military": 0,
+            "infected": 0,
+            "area": 1453,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 5770,
+              "stone": 0,
+              "grain": 20272.216598510742,
+              "treasury": 28651.798767089844
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 1,
+            "generation": 1,
+            "alive": false,
+            "population": 0,
+            "military": 0,
+            "infected": 0,
+            "area": 0,
+            "nodes": 8,
+            "functional_nodes": 0,
+            "stock": {
+              "wood": 1020,
+              "stone": 0,
+              "grain": 0,
+              "treasury": 9545.129852294922
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 2,
+            "generation": 1,
+            "alive": true,
+            "population": 43.05816650390625,
+            "military": 0,
+            "infected": 0.912353515625,
+            "area": 159,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 8310,
+              "stone": 0,
+              "grain": 0,
+              "treasury": 42298.88204956055
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 3,
+            "generation": 1,
+            "alive": true,
+            "population": 2944.509292602539,
+            "military": 0,
+            "infected": 43.24760437011719,
+            "area": 2125,
+            "nodes": 51,
+            "functional_nodes": 51,
+            "stock": {
+              "wood": 14865,
+              "stone": 0,
+              "grain": 4819.120086669922,
+              "treasury": 15649.56802368164
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          }
+        ],
+        "initial_generations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "original_generation_survival": [
+          true,
+          false,
+          true,
+          true
+        ],
+        "current_slot_alive": [
+          true,
+          false,
+          true,
+          true
+        ],
+        "estimated_cost": 0.09228000000000003,
+        "cumulative_reserved_spend": 0.18170660000000002,
+        "usage": [
+          {
+            "input_tokens": 2422,
+            "output_tokens": 282,
+            "estimated_cost": 0.0046316000000000005
+          },
+          {
+            "input_tokens": 2443,
+            "output_tokens": 369,
+            "estimated_cost": 0.0050438
+          },
+          {
+            "input_tokens": 2446,
+            "output_tokens": 421,
+            "estimated_cost": 0.005276799999999999
+          },
+          {
+            "input_tokens": 2447,
+            "output_tokens": 419,
+            "estimated_cost": 0.0052694
+          },
+          {
+            "input_tokens": 2444,
+            "output_tokens": 53,
+            "estimated_cost": 0.0036547999999999997
+          },
+          {
+            "input_tokens": 2678,
+            "output_tokens": 332,
+            "estimated_cost": 0.00521
+          },
+          {
+            "input_tokens": 2455,
+            "output_tokens": 313,
+            "estimated_cost": 0.0048142
+          },
+          {
+            "input_tokens": 2457,
+            "output_tokens": 366,
+            "estimated_cost": 0.0050501999999999995
+          },
+          {
+            "input_tokens": 2455,
+            "output_tokens": 527,
+            "estimated_cost": 0.0057558
+          },
+          {
+            "input_tokens": 2454,
+            "output_tokens": 530,
+            "estimated_cost": 0.0057676
+          },
+          {
+            "input_tokens": 2454,
+            "output_tokens": 422,
+            "estimated_cost": 0.0052924
+          },
+          {
+            "input_tokens": 2984,
+            "output_tokens": 244,
+            "estimated_cost": 0.0052512
+          },
+          {
+            "input_tokens": 2453,
+            "output_tokens": 447,
+            "estimated_cost": 0.005401
+          },
+          {
+            "input_tokens": 2459,
+            "output_tokens": 363,
+            "estimated_cost": 0.0050398000000000005
+          },
+          {
+            "input_tokens": 2457,
+            "output_tokens": 410,
+            "estimated_cost": 0.0052438
+          },
+          {
+            "input_tokens": 2456,
+            "output_tokens": 330,
+            "estimated_cost": 0.0048904
+          },
+          {
+            "input_tokens": 2457,
+            "output_tokens": 471,
+            "estimated_cost": 0.0055122
+          },
+          {
+            "input_tokens": 2455,
+            "output_tokens": 395,
+            "estimated_cost": 0.005175
+          }
+        ]
+      }
+    },
+    {
+      "id": "103-3-scripted-r0",
+      "seed": 103,
+      "position": 3,
+      "repeat": 0,
+      "variant": "scripted",
+      "controller": "scripted",
+      "scenario": "calibrated-demo-1024ticks",
+      "track": "partial",
+      "steps": 256,
+      "decision_interval": 16,
+      "planning_budget": null,
+      "use_memory": true,
+      "status": "completed",
+      "result": {
+        "status": "completed",
+        "steps": 256,
+        "digest": 16369253843165319253,
+        "track": "partial",
+        "controllers": [
+          "native",
+          "native",
+          "native",
+          "scripted"
+        ],
+        "decisions": 0,
+        "attempted_decisions": 0,
+        "fallbacks": 0,
+        "validation_failures": 0,
+        "decision_seconds": 0,
+        "decision_latencies": [],
+        "tool_calls": 0,
+        "final_observations": [
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 0,
+            "generation": 1,
+            "alive": true,
+            "population": 2584.915817260742,
+            "military": 0,
+            "infected": 0,
+            "area": 2413,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 7015,
+              "stone": 0,
+              "grain": 24533.288986206055,
+              "treasury": 32075.584060668945
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 1,
+            "generation": 1,
+            "alive": true,
+            "population": 1232.884262084961,
+            "military": 0,
+            "infected": 54.90069580078125,
+            "area": 817,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 2465,
+              "stone": 0,
+              "grain": 2792.9430541992188,
+              "treasury": 16850.97462463379
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 2,
+            "generation": 1,
+            "alive": true,
+            "population": 212.44728088378906,
+            "military": 0,
+            "infected": 0.912353515625,
+            "area": 387,
+            "nodes": 8,
+            "functional_nodes": 8,
+            "stock": {
+              "wood": 8795,
+              "stone": 0,
+              "grain": 0,
+              "treasury": 44259.73622131348
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          },
+          {
+            "schema_version": 1,
+            "tick": 1024,
+            "macro_interval": 4,
+            "episode_ticks": 2000,
+            "num_agents": 4,
+            "kingdom_id": 3,
+            "generation": 1,
+            "alive": true,
+            "population": 268.32667541503906,
+            "military": 0,
+            "infected": 0.7625885009765625,
+            "area": 120,
+            "nodes": 68,
+            "functional_nodes": 62,
+            "stock": {
+              "wood": 5345,
+              "stone": 0,
+              "grain": 0,
+              "treasury": 13786.529571533203
+            },
+            "reputation": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "treaties": []
+          }
+        ],
+        "initial_generations": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "original_generation_survival": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "current_slot_alive": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "estimated_cost": 0,
+        "cumulative_reserved_spend": 0,
+        "usage": []
+      }
+    }
+  ],
+  "summary": {
+    "llm-memory": {
+      "episodes": 5,
+      "attempted_episodes": 5,
+      "failed_episodes": 0,
+      "metrics": {
+        "population": {
+          "mean": 2337.3984619140624,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            1601.3205780029298,
+            3052.192462158203
+          ],
+          "missing_episodes": 0
+        },
+        "survival": {
+          "mean": 1.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            1.0,
+            1.0
+          ],
+          "missing_episodes": 0
+        },
+        "original_generation_survival": {
+          "mean": 1.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            1.0,
+            1.0
+          ],
+          "missing_episodes": 0
+        },
+        "current_slot_alive": {
+          "mean": 1.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            1.0,
+            1.0
+          ],
+          "missing_episodes": 0
+        },
+        "functional_nodes": {
+          "mean": 23.8,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            16.6,
+            30.8
+          ],
+          "missing_episodes": 0
+        },
+        "grain": {
+          "mean": 30597.002197265625,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            3721.892135620117,
+            71181.23927612304
+          ],
+          "missing_episodes": 0
+        },
+        "fallbacks": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ],
+          "missing_episodes": 0
+        },
+        "validation_failures": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ],
+          "missing_episodes": 0
+        },
+        "decision_seconds": {
+          "mean": 460.69543563840233,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            179.05756332440325,
+            964.2844310030007
+          ],
+          "missing_episodes": 0
+        },
+        "input_tokens": {
+          "mean": 40419.8,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            39209.185,
+            42788.8
+          ],
+          "missing_episodes": 0
+        },
+        "output_tokens": {
+          "mean": 5950.6,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            5472.8,
+            6428.4
+          ],
+          "missing_episodes": 0
+        },
+        "estimated_cost": {
+          "mean": 0.08277036,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.07927298199999996,
+            0.08625608
+          ],
+          "missing_episodes": 0
+        },
+        "completion": {
+          "mean": 1.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            1.0,
+            1.0
+          ],
+          "missing_episodes": 0
+        }
+      },
+      "decision_latency_seconds": {
+        "count": 80,
+        "p50": 10.37138258449977,
+        "p95": 26.980532273349937
+      }
+    },
+    "llm-no-memory": {
+      "episodes": 5,
+      "attempted_episodes": 5,
+      "failed_episodes": 0,
+      "metrics": {
+        "population": {
+          "mean": 2489.124008178711,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            1931.166226196289,
+            3129.8317169189454
+          ],
+          "missing_episodes": 0
+        },
+        "survival": {
+          "mean": 1.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            1.0,
+            1.0
+          ],
+          "missing_episodes": 0
+        },
+        "original_generation_survival": {
+          "mean": 1.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            1.0,
+            1.0
+          ],
+          "missing_episodes": 0
+        },
+        "current_slot_alive": {
+          "mean": 1.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            1.0,
+            1.0
+          ],
+          "missing_episodes": 0
+        },
+        "functional_nodes": {
+          "mean": 24.2,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            15.2,
+            37.8
+          ],
+          "missing_episodes": 0
+        },
+        "grain": {
+          "mean": 24103.924099731445,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            3586.4457580566404,
+            55929.29056091308
+          ],
+          "missing_episodes": 0
+        },
+        "fallbacks": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ],
+          "missing_episodes": 0
+        },
+        "validation_failures": {
+          "mean": 0.2,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.6
+          ],
+          "missing_episodes": 0
+        },
+        "decision_seconds": {
+          "mean": 218.85241289060178,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            160.29621800239983,
+            279.308361814202
+          ],
+          "missing_episodes": 0
+        },
+        "input_tokens": {
+          "mean": 40897.2,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            39202.4,
+            43163.4
+          ],
+          "missing_episodes": 0
+        },
+        "output_tokens": {
+          "mean": 6116.6,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            5854.410000000001,
+            6430.6
+          ],
+          "missing_episodes": 0
+        },
+        "estimated_cost": {
+          "mean": 0.08416912,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.08064359999999998,
+            0.08870267999999999
+          ],
+          "missing_episodes": 0
+        },
+        "completion": {
+          "mean": 1.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            1.0,
+            1.0
+          ],
+          "missing_episodes": 0
+        }
+      },
+      "decision_latency_seconds": {
+        "count": 80,
+        "p50": 12.016877367999768,
+        "p95": 24.280746623200226
+      }
+    },
+    "scripted": {
+      "episodes": 5,
+      "attempted_episodes": 5,
+      "failed_episodes": 0,
+      "metrics": {
+        "population": {
+          "mean": 53.66533508300781,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            160.99600524902343
+          ],
+          "missing_episodes": 0
+        },
+        "survival": {
+          "mean": 0.2,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.6
+          ],
+          "missing_episodes": 0
+        },
+        "original_generation_survival": {
+          "mean": 0.2,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.6
+          ],
+          "missing_episodes": 0
+        },
+        "current_slot_alive": {
+          "mean": 0.2,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.6
+          ],
+          "missing_episodes": 0
+        },
+        "functional_nodes": {
+          "mean": 12.4,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            37.2
+          ],
+          "missing_episodes": 0
+        },
+        "grain": {
+          "mean": 3850.3304077148437,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            558.7266876220704,
+            7141.934127807617
+          ],
+          "missing_episodes": 0
+        },
+        "fallbacks": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ],
+          "missing_episodes": 0
+        },
+        "validation_failures": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ],
+          "missing_episodes": 0
+        },
+        "decision_seconds": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ],
+          "missing_episodes": 0
+        },
+        "input_tokens": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ],
+          "missing_episodes": 0
+        },
+        "output_tokens": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ],
+          "missing_episodes": 0
+        },
+        "estimated_cost": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ],
+          "missing_episodes": 0
+        },
+        "completion": {
+          "mean": 1.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            1.0,
+            1.0
+          ],
+          "missing_episodes": 0
+        }
+      },
+      "decision_latency_seconds": {
+        "count": 0,
+        "p50": null,
+        "p95": null
+      }
+    }
+  },
+  "paired_vs_scripted": {
+    "llm-memory-minus-scripted": {
+      "planned_pairs": 5,
+      "completed_pairs": 5,
+      "excluded_incomplete_pairs": 0,
+      "metrics": {
+        "population": {
+          "mean": 2283.7331268310545,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            1547.6552429199219,
+            3029.882255935668
+          ]
+        },
+        "survival": {
+          "mean": 0.8,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.4,
+            1.0
+          ]
+        },
+        "original_generation_survival": {
+          "mean": 0.8,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.4,
+            1.0
+          ]
+        },
+        "current_slot_alive": {
+          "mean": 0.8,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.4,
+            1.0
+          ]
+        },
+        "functional_nodes": {
+          "mean": 11.4,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -7.8,
+            24.6
+          ]
+        },
+        "grain": {
+          "mean": 26746.671789550783,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            46.26686401367188,
+            66242.34625854492
+          ]
+        },
+        "fallbacks": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "validation_failures": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "decision_seconds": {
+          "mean": 460.69543563840233,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            179.3979715638081,
+            964.2844310030007
+          ]
+        },
+        "input_tokens": {
+          "mean": 40419.8,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            39209.2,
+            42788.8
+          ]
+        },
+        "output_tokens": {
+          "mean": 5950.6,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            5472.8,
+            6410.4
+          ]
+        },
+        "estimated_cost": {
+          "mean": 0.08277036,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.07947931999999998,
+            0.08620233800000002
+          ]
+        },
+        "completion": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "direction": "variant minus reference; positive favors variant only for benefit metrics"
+    },
+    "llm-no-memory-minus-scripted": {
+      "planned_pairs": 5,
+      "completed_pairs": 5,
+      "excluded_incomplete_pairs": 0,
+      "metrics": {
+        "population": {
+          "mean": 2435.458673095703,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            1896.5309753417969,
+            3006.5863068389876
+          ]
+        },
+        "survival": {
+          "mean": 0.8,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.4,
+            1.0
+          ]
+        },
+        "original_generation_survival": {
+          "mean": 0.8,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.4,
+            1.0
+          ]
+        },
+        "current_slot_alive": {
+          "mean": 0.8,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.4,
+            1.0
+          ]
+        },
+        "functional_nodes": {
+          "mean": 11.8,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -0.2,
+            20.0
+          ]
+        },
+        "grain": {
+          "mean": 20253.593692016602,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -57.0956787109375,
+            52262.62516784668
+          ]
+        },
+        "fallbacks": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "validation_failures": {
+          "mean": 0.2,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.6
+          ]
+        },
+        "decision_seconds": {
+          "mean": 218.85241289060178,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            160.1746397376024,
+            279.308361814202
+          ]
+        },
+        "input_tokens": {
+          "mean": 40897.2,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            39202.4,
+            43163.4
+          ]
+        },
+        "output_tokens": {
+          "mean": 6116.6,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            5854.6,
+            6430.6
+          ]
+        },
+        "estimated_cost": {
+          "mean": 0.08416912,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.08064359999999998,
+            0.08870267999999999
+          ]
+        },
+        "completion": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "direction": "variant minus reference; positive favors variant only for benefit metrics"
+    }
+  },
+  "paired_memory_ablation": {
+    "llm-memory-minus-llm-no-memory": {
+      "planned_pairs": 5,
+      "completed_pairs": 5,
+      "excluded_incomplete_pairs": 0,
+      "metrics": {
+        "population": {
+          "mean": -151.72554626464844,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -348.875732421875,
+            26.300192260742186
+          ]
+        },
+        "survival": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "original_generation_survival": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "current_slot_alive": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "functional_nodes": {
+          "mean": -0.4,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -8.4,
+            6.0
+          ]
+        },
+        "grain": {
+          "mean": 6493.0780975341795,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            135.44637756347657,
+            14474.683358764649
+          ]
+        },
+        "fallbacks": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "validation_failures": {
+          "mean": -0.2,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -0.6,
+            0.0
+          ]
+        },
+        "decision_seconds": {
+          "mean": 241.84302274780057,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -73.02063594219871,
+            788.1313871221988
+          ]
+        },
+        "input_tokens": {
+          "mean": -477.4,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -1606.8,
+            166.2
+          ]
+        },
+        "output_tokens": {
+          "mean": -166.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -608.4,
+            360.8
+          ]
+        },
+        "estimated_cost": {
+          "mean": -0.0013987600000000045,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -0.0026861200000000253,
+            0.0008777600000000219
+          ]
+        },
+        "completion": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "direction": "variant minus reference; positive favors variant only for benefit metrics"
+    },
+    "scripted-minus-llm-no-memory": {
+      "planned_pairs": 5,
+      "completed_pairs": 5,
+      "excluded_incomplete_pairs": 0,
+      "metrics": {
+        "population": {
+          "mean": -2435.458673095703,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -3006.5863068389895,
+            -1896.5309753417969
+          ]
+        },
+        "survival": {
+          "mean": -0.8,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -1.0,
+            -0.4
+          ]
+        },
+        "original_generation_survival": {
+          "mean": -0.8,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -1.0,
+            -0.4
+          ]
+        },
+        "current_slot_alive": {
+          "mean": -0.8,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -1.0,
+            -0.4
+          ]
+        },
+        "functional_nodes": {
+          "mean": -11.8,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -20.0,
+            0.2
+          ]
+        },
+        "grain": {
+          "mean": -20253.593692016602,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -52262.62516784668,
+            57.0956787109375
+          ]
+        },
+        "fallbacks": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "validation_failures": {
+          "mean": -0.2,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -0.6,
+            0.0
+          ]
+        },
+        "decision_seconds": {
+          "mean": -218.85241289060178,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -279.308361814202,
+            -160.1746397376024
+          ]
+        },
+        "input_tokens": {
+          "mean": -40897.2,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -43163.4,
+            -39202.4
+          ]
+        },
+        "output_tokens": {
+          "mean": -6116.6,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -6430.6,
+            -5854.6
+          ]
+        },
+        "estimated_cost": {
+          "mean": -0.08416912,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            -0.08870267999999999,
+            -0.08064359999999998
+          ]
+        },
+        "completion": {
+          "mean": 0.0,
+          "independent_seeds": 5,
+          "seed_bootstrap_95_percent_interval": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "direction": "variant minus reference; positive favors variant only for benefit metrics"
+    }
+  }
+}

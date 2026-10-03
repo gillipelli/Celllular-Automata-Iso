@@ -1,0 +1,14 @@
+{
+  "stage": "development",
+  "suites": {
+    "development-shard-0.json": "11a149f366787e359034faff98882e31d453553bc1c89d0e7827d919be680a05",
+    "development-shard-1.json": "9ef82cd471220b877ec22c9e6309c491aeb6a3c2864f802b0cc0e8f333beed70",
+    "development-shard-2.json": "e5893edf1200781f349d5fb19b09a34309a1f34728ea000fac91e8a1fd616199",
+    "development-shard-3.json": "098b47d3edd4ef0971fa3ccf69acb861db326fd955979644661b5dbc7a1789bf"
+  },
+  "model": "glm-5.3",
+  "reasoning_effort": "low",
+  "max_output_tokens": 4096,
+  "global_ledger": "<local-campaign>/budget.sqlite",
+  "note": "Each shard has its own USD ledger; campaign token ceiling is shared."
+}

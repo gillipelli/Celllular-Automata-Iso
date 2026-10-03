@@ -118,3 +118,7 @@ ctest --test-dir build-sanitize --output-on-failure
 `-DASHFALL_STATISTICAL_TESTS=ON` adds recorded-sample/fit validation to CTest. The analyzer's `--legacy-exponent-check` separately evaluates the superseded design-v1 exponent hypothesis; it still fails on the original data, which have not been altered. To collect fresh forest-only data use `ashfall_headless --forest-only --size 128 --ticks 20000 --events runs/fires.csv` (and repeat at size 256).
 
 Core tests cover deterministic parallel forest updates, allocation-free ticks, fixed-point bounds, configuration, graph pruning/recovery, macro actions, disease/population invariants, and collapse under shortage. Eight forest and two kingdom golden replays cover 5,000 ticks each. CI definitions build GCC/Clang, sanitizers, the viewer, and a graphics-free container. Python/training smoke tests were also run locally; see the validation log for exact coverage and remaining research work.
+
+## Published live evaluation
+
+See the [October 2, 2026 live evaluation results](evaluations/results/2026-10-02/RESULTS.md) for the completed 60-episode cohort, paired comparisons, failures, and replay evidence.

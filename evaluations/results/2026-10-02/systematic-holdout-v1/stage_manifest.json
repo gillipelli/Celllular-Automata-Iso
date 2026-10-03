@@ -1,0 +1,14 @@
+{
+  "stage": "holdout",
+  "suites": {
+    "holdout-shard-0.json": "6a83b7710fe87a097b8b860be5453489c4f7314b0fb479ec526dd0823ac657cc",
+    "holdout-shard-1.json": "caa3b63d8af66868afad5d5ed0f1c52a381224173947a47428668d8116366865",
+    "holdout-shard-2.json": "d19ed6cdc4bd892d722d8faa5c8c322fdebf73c2e31ad294a1eb7c319dfed127",
+    "holdout-shard-3.json": "d037d0c4e8eb83e2287eec08bf86906802bda6bee48f31f4b9345a9dd06e8f6c"
+  },
+  "model": "glm-5.3",
+  "reasoning_effort": "low",
+  "max_output_tokens": 4096,
+  "global_ledger": "<local-campaign>/budget.sqlite",
+  "note": "Each shard has its own USD ledger; campaign token ceiling is shared."
+}
