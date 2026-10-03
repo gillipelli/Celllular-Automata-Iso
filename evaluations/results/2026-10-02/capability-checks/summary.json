@@ -1,0 +1,266 @@
+[
+  {
+    "run": "capability-memory-v1",
+    "result": {
+      "capability": "memory",
+      "passed": true,
+      "exercised": true,
+      "private_metadata_leak": false,
+      "replay_matches": true,
+      "digest": 11767845223744576849,
+      "intent": "Observed tick0->4: pop 24.5->28.5, grain 300->312.5, area 0->35, kingdom alive with only the capital functional. Priority is completing a granary (capital is functional, so it satisfies the granary dependency) to unlock functional farms; secondary weights on woodcamp/quarry for resource supply, and farm construction once granary completes. Allocation prioritizes grain food security, construction/repair (>5% enables repair and new buildings), wood stockpiling, and reserve for treasury tax revenue.",
+      "metrics": {
+        "fallback": false,
+        "tool_calls": 2,
+        "failures": 0,
+        "seconds": 11.526918036001007
+      },
+      "usage": [
+        {
+          "input_tokens": 2489,
+          "output_tokens": 55,
+          "estimated_cost": 0.0037266
+        },
+        {
+          "input_tokens": 3247,
+          "output_tokens": 368,
+          "estimated_cost": 0.0061649999999999995
+        }
+      ],
+      "limitation": "Explicitly prompted live capability probe; not evidence of spontaneous tool use or strategic benefit."
+    }
+  },
+  {
+    "run": "capability-planning-v1",
+    "result": {
+      "capability": "planning",
+      "passed": true,
+      "exercised": true,
+      "private_metadata_leak": false,
+      "replay_matches": true,
+      "digest": 8159455501691385870,
+      "intent": "Oracle comparison of 3 candidates over 8 steps: all survived (pop 54.2, alive) with equal reward, but candidate 2 yielded the most grain (606 vs 505/454), one extra node, and healthy stone (85). Prioritizing grain+construction builds granary/woodcamp/farm chain (farm requires granary), which is the sustainable infrastructure path; small reserve keeps treasury flowing, openness absorbs growth.",
+      "metrics": {
+        "fallback": false,
+        "tool_calls": 2,
+        "failures": 0,
+        "seconds": 19.699341543000628
+      },
+      "usage": [
+        {
+          "input_tokens": 2973,
+          "output_tokens": 332,
+          "estimated_cost": 0.005623
+        },
+        {
+          "input_tokens": 4526,
+          "output_tokens": 266,
+          "estimated_cost": 0.007506799999999999
+        }
+      ],
+      "limitation": "Explicitly prompted live capability probe; not evidence of spontaneous tool use or strategic benefit."
+    }
+  },
+  {
+    "run": "joint-smoke-v1",
+    "result": {
+      "status": "completed",
+      "steps": 8,
+      "digest": 7392210632157579975,
+      "track": "partial",
+      "controllers": [
+        "llm",
+        "llm",
+        "native",
+        "native"
+      ],
+      "decisions": 4,
+      "attempted_decisions": 4,
+      "fallbacks": 0,
+      "validation_failures": 1,
+      "decision_seconds": 36.92897215100129,
+      "decision_latencies": [
+        8.152638880001177,
+        6.4380795340002805,
+        5.752037762000327,
+        16.586215974999504
+      ],
+      "tool_calls": 7,
+      "final_observations": [
+        {
+          "schema_version": 1,
+          "tick": 32,
+          "macro_interval": 4,
+          "episode_ticks": 2000,
+          "num_agents": 4,
+          "kingdom_id": 0,
+          "generation": 1,
+          "alive": true,
+          "population": 50.74888610839844,
+          "military": 0,
+          "infected": 0,
+          "area": 66,
+          "nodes": 6,
+          "functional_nodes": 1,
+          "stock": {
+            "wood": 20,
+            "stone": 50,
+            "grain": 512.401611328125,
+            "treasury": 320.0611114501953
+          },
+          "reputation": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "treaties": []
+        },
+        {
+          "schema_version": 1,
+          "tick": 32,
+          "macro_interval": 4,
+          "episode_ticks": 2000,
+          "num_agents": 4,
+          "kingdom_id": 1,
+          "generation": 1,
+          "alive": true,
+          "population": 77.00804138183594,
+          "military": 0,
+          "infected": 0,
+          "area": 97,
+          "nodes": 7,
+          "functional_nodes": 1,
+          "stock": {
+            "wood": 5,
+            "stone": 50,
+            "grain": 466.86175537109375,
+            "treasury": 328.77552795410156
+          },
+          "reputation": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "treaties": []
+        },
+        {
+          "schema_version": 1,
+          "tick": 32,
+          "macro_interval": 4,
+          "episode_ticks": 2000,
+          "num_agents": 4,
+          "kingdom_id": 2,
+          "generation": 1,
+          "alive": true,
+          "population": 91.92127990722656,
+          "military": 0,
+          "infected": 0,
+          "area": 120,
+          "nodes": 7,
+          "functional_nodes": 1,
+          "stock": {
+            "wood": 60,
+            "stone": 60,
+            "grain": 618.7687072753906,
+            "treasury": 358.11402893066406
+          },
+          "reputation": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "treaties": []
+        },
+        {
+          "schema_version": 1,
+          "tick": 32,
+          "macro_interval": 4,
+          "episode_ticks": 2000,
+          "num_agents": 4,
+          "kingdom_id": 3,
+          "generation": 1,
+          "alive": true,
+          "population": 54.35169982910156,
+          "military": 0,
+          "infected": 0,
+          "area": 73,
+          "nodes": 7,
+          "functional_nodes": 1,
+          "stock": {
+            "wood": 15,
+            "stone": 60,
+            "grain": 460.3090362548828,
+            "treasury": 332.79681396484375
+          },
+          "reputation": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "treaties": []
+        }
+      ],
+      "initial_generations": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "original_generation_survival": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "current_slot_alive": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "estimated_cost": 0.032917199999999994,
+      "cumulative_reserved_spend": 0.032917199999999994,
+      "usage": [
+        {
+          "input_tokens": 2421,
+          "output_tokens": 479,
+          "estimated_cost": 0.005497
+        },
+        {
+          "input_tokens": 2420,
+          "output_tokens": 238,
+          "estimated_cost": 0.004435199999999999
+        },
+        {
+          "input_tokens": 2441,
+          "output_tokens": 315,
+          "estimated_cost": 0.004803399999999999
+        },
+        {
+          "input_tokens": 2442,
+          "output_tokens": 43,
+          "estimated_cost": 0.0036079999999999997
+        },
+        {
+          "input_tokens": 2665,
+          "output_tokens": 38,
+          "estimated_cost": 0.0038981999999999992
+        },
+        {
+          "input_tokens": 2728,
+          "output_tokens": 36,
+          "estimated_cost": 0.0039775999999999995
+        },
+        {
+          "input_tokens": 3285,
+          "output_tokens": 477,
+          "estimated_cost": 0.0066978
+        }
+      ]
+    }
+  }
+]

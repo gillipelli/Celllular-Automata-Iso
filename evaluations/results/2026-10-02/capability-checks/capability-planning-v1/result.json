@@ -1,0 +1,28 @@
+{
+  "capability": "planning",
+  "passed": true,
+  "exercised": true,
+  "private_metadata_leak": false,
+  "replay_matches": true,
+  "digest": 8159455501691385870,
+  "intent": "Oracle comparison of 3 candidates over 8 steps: all survived (pop 54.2, alive) with equal reward, but candidate 2 yielded the most grain (606 vs 505/454), one extra node, and healthy stone (85). Prioritizing grain+construction builds granary/woodcamp/farm chain (farm requires granary), which is the sustainable infrastructure path; small reserve keeps treasury flowing, openness absorbs growth.",
+  "metrics": {
+    "fallback": false,
+    "tool_calls": 2,
+    "failures": 0,
+    "seconds": 19.699341543000628
+  },
+  "usage": [
+    {
+      "input_tokens": 2973,
+      "output_tokens": 332,
+      "estimated_cost": 0.005623
+    },
+    {
+      "input_tokens": 4526,
+      "output_tokens": 266,
+      "estimated_cost": 0.007506799999999999
+    }
+  ],
+  "limitation": "Explicitly prompted live capability probe; not evidence of spontaneous tool use or strategic benefit."
+}

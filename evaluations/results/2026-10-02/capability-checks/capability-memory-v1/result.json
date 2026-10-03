@@ -1,0 +1,28 @@
+{
+  "capability": "memory",
+  "passed": true,
+  "exercised": true,
+  "private_metadata_leak": false,
+  "replay_matches": true,
+  "digest": 11767845223744576849,
+  "intent": "Observed tick0->4: pop 24.5->28.5, grain 300->312.5, area 0->35, kingdom alive with only the capital functional. Priority is completing a granary (capital is functional, so it satisfies the granary dependency) to unlock functional farms; secondary weights on woodcamp/quarry for resource supply, and farm construction once granary completes. Allocation prioritizes grain food security, construction/repair (>5% enables repair and new buildings), wood stockpiling, and reserve for treasury tax revenue.",
+  "metrics": {
+    "fallback": false,
+    "tool_calls": 2,
+    "failures": 0,
+    "seconds": 11.526918036001007
+  },
+  "usage": [
+    {
+      "input_tokens": 2489,
+      "output_tokens": 55,
+      "estimated_cost": 0.0037266
+    },
+    {
+      "input_tokens": 3247,
+      "output_tokens": 368,
+      "estimated_cost": 0.0061649999999999995
+    }
+  ],
+  "limitation": "Explicitly prompted live capability probe; not evidence of spontaneous tool use or strategic benefit."
+}

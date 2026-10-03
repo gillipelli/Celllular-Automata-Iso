@@ -1,0 +1,48 @@
+{
+  "initial_generations": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "initial_alive": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "format": "ASHFALL-AGENT-RUN-1",
+  "controllers": [
+    "llm",
+    "llm",
+    "native",
+    "native"
+  ],
+  "track": "partial",
+  "seed": 100,
+  "config": "# Short deterministic fixture/demo episode. Not a scientific benchmark.\n[world]\nsize = 64\nkingdoms = 4\nmacro_interval = 4\nepisode_ticks = 2000\nforest_warmup = 0\n[simulation]\nenabled = 1\nmax_nodes = 128\npolicy = 2\n",
+  "decision_interval": 4,
+  "use_memory": true,
+  "planning_budget": null,
+  "simulator": {
+    "wrapper": "932e171a2a723afcbef745faeeed16e90613c9a9d368a740437a1139c21eeec2",
+    "library": "934587a30b3f82566ea76acb99373019fefeb8e75015f13bd0d1b41d7eee5013"
+  },
+  "model": "glm-5.3",
+  "provider_settings": {
+    "provider": "zai",
+    "model": "glm-5.3",
+    "cap": 1.0,
+    "input_rate": 1.4,
+    "output_rate": 4.4,
+    "max_tokens": 4096,
+    "reasoning_effort": "low",
+    "endpoint": "https://api.z.ai/api/paas/v4/chat/completions"
+  },
+  "code_revision": "4ec877961e7e6201b712a425c447a4e4fc245196",
+  "source_hash": "dacd08b51bfc63dd3a6abedd8d4ef25aef37407e62eaa06b78bf6166f941f916",
+  "fixture_disclaimer": "fixture is scripted tool execution, not an LLM result",
+  "native_policy_information": "Native opponents can inspect internal state; not observation-matched baselines.",
+  "starting_spend": 0.0,
+  "starting_usage": 0
+}

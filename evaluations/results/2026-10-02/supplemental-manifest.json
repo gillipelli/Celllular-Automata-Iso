@@ -1,0 +1,32 @@
+{
+  "files": {
+    "additional-evidence/evaluated-source-snapshot.json": "24e451ff0ab9aa2bbb27f3b9b6bc1d08437d66471945d6ec0c862b544c403b5f",
+    "additional-evidence/trial-artifact-hashes.json": "58979b54975128382acc9070790a7b742b4a185ed17c16af0340d4ba304a78a9",
+    "additional-evidence/selected-traces/1004-0-llm-no-memory-r0/manifest.json.gz": "b6007cc38ff776cf2e8162bf81c01864348847031fc9e7b35c24ac632b72997a",
+    "additional-evidence/selected-traces/1004-0-llm-no-memory-r0/result.json.gz": "f7fd600bb6c73e9a98090df6bc2346993d19e7698d0080a9ecbc65c13a35345b",
+    "additional-evidence/selected-traces/1004-0-llm-no-memory-r0/session.json.gz": "92c36b7c1dbe5ed2d1d1a14cfcdb9c54f4a2801be8316478043b91d273a567a3",
+    "additional-evidence/selected-traces/1004-0-llm-no-memory-r0/events.jsonl.gz": "c924b10b04990b2f8d0ade0b071d9e9d5e86ce1a7f1cb9ad1c4acbd64dec8776",
+    "additional-evidence/selected-traces/1000-0-llm-memory-r0/manifest.json.gz": "54c636e5f3463c0d92b9616626349e918de6dfe2fe0f9e4cb896eae72fdc76bc",
+    "additional-evidence/selected-traces/1000-0-llm-memory-r0/result.json.gz": "f38d7e33dc7b0d24f642f047010982968e7734c72391c5b330ba7d0032a0379c",
+    "additional-evidence/selected-traces/1000-0-llm-memory-r0/session.json.gz": "7be39b988be8e6d84fe5118383f2de69d046aecd58ac829dcbddea44227f50a6",
+    "additional-evidence/selected-traces/1000-0-llm-memory-r0/events.jsonl.gz": "d71cb0a5328ff0bde661d961d9198e06771e96442689e237b117f300e1607686",
+    "additional-evidence/selected-traces/1007-3-llm-memory-r0/manifest.json.gz": "4a1e9b059ba6bc8c2aab26323cbb22236e437958dfa541fd7dba373be9f3e664",
+    "additional-evidence/selected-traces/1007-3-llm-memory-r0/result.json.gz": "05dbf52be0d0a417db8d2ea86d3cd97d7bb593025b46c0a8a966402e1e5be164",
+    "additional-evidence/selected-traces/1007-3-llm-memory-r0/session.json.gz": "33f089c53f3a85cba3844de33b24905930c5254ba75863b50ec66c57364191bf",
+    "additional-evidence/selected-traces/1007-3-llm-memory-r0/events.jsonl.gz": "6333b5b84b0bbd54e396cf394f53db1e5d28bcfc7bfb25158c1b4f235005ed52",
+    "capability-checks/summary.json": "e2b6cece6d1f8748d83aea2272fcc026c653f5f28edceaa1e3959b263de282ab",
+    "capability-checks/capability-memory-v1/result.json": "1e5c1fbf43b4e728dd667cbb86d6dbefe1b732c6a0e262b2edfe39bc441ad857",
+    "capability-checks/capability-memory-v1/session.json.gz": "8625c41bd008e237e6d536c82cfc4be11308e8960f86e4b77a158682096e02db",
+    "capability-checks/capability-memory-v1/events.jsonl.gz": "5b37fd6766007a83ed9d3553648e9bfa2ab52b0134ed7a2428f99e09d696c373",
+    "capability-checks/capability-memory-v1/manifest.json": "0b8c69732d0e7301e297952cc8ae5acc25add1d4ecb33c629c834aebcb159c0a",
+    "capability-checks/capability-planning-v1/result.json": "8565a3068d7a49be17fd3a0b1ccdf8aa7f79d9ed3d824e329ab3d758fe29367b",
+    "capability-checks/capability-planning-v1/session.json.gz": "4495278d24b155230dbd47bae179ca538e8e8a422a98143b2358cfe8574ef036",
+    "capability-checks/capability-planning-v1/events.jsonl.gz": "abf70dd95cea905a3ead62a2b5e0ad7334fd4b01d0589d8a06897d1fb7c2edb7",
+    "capability-checks/capability-planning-v1/manifest.json": "382c29a363c47187a2084e337b48b042359e0ebcf2bfd0e6543d133c40aecb3c",
+    "capability-checks/joint-smoke-v1/result.json": "7b49bb12d67dabb7a82e72b4f9356cbbaa5aca22d8b208d8b344278a95e1a3bd",
+    "capability-checks/joint-smoke-v1/session.json.gz": "d146ecc4795d96a7253d677e39c487cf316a923890eaa66804b82234fa027f2d",
+    "capability-checks/joint-smoke-v1/events.jsonl.gz": "612e3351f6f229d4ec956bb3ca04fad2561ecd4d029e89df1fd33616fe5fc0fa",
+    "capability-checks/joint-smoke-v1/manifest.json": "af221a458ce53a7ca6aa1dba09390e94d457ed27f3f0bd23f8f63b73e1701757"
+  },
+  "note": "Original raw compressed evidence; integration probes are separate from the held-out cohort."
+}

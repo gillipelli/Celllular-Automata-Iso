@@ -1,0 +1,199 @@
+{
+  "status": "completed",
+  "steps": 8,
+  "digest": 7392210632157579975,
+  "track": "partial",
+  "controllers": [
+    "llm",
+    "llm",
+    "native",
+    "native"
+  ],
+  "decisions": 4,
+  "attempted_decisions": 4,
+  "fallbacks": 0,
+  "validation_failures": 1,
+  "decision_seconds": 36.92897215100129,
+  "decision_latencies": [
+    8.152638880001177,
+    6.4380795340002805,
+    5.752037762000327,
+    16.586215974999504
+  ],
+  "tool_calls": 7,
+  "final_observations": [
+    {
+      "schema_version": 1,
+      "tick": 32,
+      "macro_interval": 4,
+      "episode_ticks": 2000,
+      "num_agents": 4,
+      "kingdom_id": 0,
+      "generation": 1,
+      "alive": true,
+      "population": 50.74888610839844,
+      "military": 0,
+      "infected": 0,
+      "area": 66,
+      "nodes": 6,
+      "functional_nodes": 1,
+      "stock": {
+        "wood": 20,
+        "stone": 50,
+        "grain": 512.401611328125,
+        "treasury": 320.0611114501953
+      },
+      "reputation": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "treaties": []
+    },
+    {
+      "schema_version": 1,
+      "tick": 32,
+      "macro_interval": 4,
+      "episode_ticks": 2000,
+      "num_agents": 4,
+      "kingdom_id": 1,
+      "generation": 1,
+      "alive": true,
+      "population": 77.00804138183594,
+      "military": 0,
+      "infected": 0,
+      "area": 97,
+      "nodes": 7,
+      "functional_nodes": 1,
+      "stock": {
+        "wood": 5,
+        "stone": 50,
+        "grain": 466.86175537109375,
+        "treasury": 328.77552795410156
+      },
+      "reputation": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "treaties": []
+    },
+    {
+      "schema_version": 1,
+      "tick": 32,
+      "macro_interval": 4,
+      "episode_ticks": 2000,
+      "num_agents": 4,
+      "kingdom_id": 2,
+      "generation": 1,
+      "alive": true,
+      "population": 91.92127990722656,
+      "military": 0,
+      "infected": 0,
+      "area": 120,
+      "nodes": 7,
+      "functional_nodes": 1,
+      "stock": {
+        "wood": 60,
+        "stone": 60,
+        "grain": 618.7687072753906,
+        "treasury": 358.11402893066406
+      },
+      "reputation": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "treaties": []
+    },
+    {
+      "schema_version": 1,
+      "tick": 32,
+      "macro_interval": 4,
+      "episode_ticks": 2000,
+      "num_agents": 4,
+      "kingdom_id": 3,
+      "generation": 1,
+      "alive": true,
+      "population": 54.35169982910156,
+      "military": 0,
+      "infected": 0,
+      "area": 73,
+      "nodes": 7,
+      "functional_nodes": 1,
+      "stock": {
+        "wood": 15,
+        "stone": 60,
+        "grain": 460.3090362548828,
+        "treasury": 332.79681396484375
+      },
+      "reputation": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "treaties": []
+    }
+  ],
+  "initial_generations": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "original_generation_survival": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "current_slot_alive": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "estimated_cost": 0.032917199999999994,
+  "cumulative_reserved_spend": 0.032917199999999994,
+  "usage": [
+    {
+      "input_tokens": 2421,
+      "output_tokens": 479,
+      "estimated_cost": 0.005497
+    },
+    {
+      "input_tokens": 2420,
+      "output_tokens": 238,
+      "estimated_cost": 0.004435199999999999
+    },
+    {
+      "input_tokens": 2441,
+      "output_tokens": 315,
+      "estimated_cost": 0.004803399999999999
+    },
+    {
+      "input_tokens": 2442,
+      "output_tokens": 43,
+      "estimated_cost": 0.0036079999999999997
+    },
+    {
+      "input_tokens": 2665,
+      "output_tokens": 38,
+      "estimated_cost": 0.0038981999999999992
+    },
+    {
+      "input_tokens": 2728,
+      "output_tokens": 36,
+      "estimated_cost": 0.0039775999999999995
+    },
+    {
+      "input_tokens": 3285,
+      "output_tokens": 477,
+      "estimated_cost": 0.0066978
+    }
+  ]
+}

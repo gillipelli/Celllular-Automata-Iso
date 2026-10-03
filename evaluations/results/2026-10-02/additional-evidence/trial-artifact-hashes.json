@@ -1,0 +1,602 @@
+[
+  {
+    "trial": "1000-0-llm-memory-r0",
+    "shard": "holdout-shard-0",
+    "sha256": {
+      "session.json": "18e37dd52fe4c04ec15eb07a15a965c14fa8b2929df256342c68b9cae4025914",
+      "events.jsonl": "e0e186ca7fa70e60208002d359d278af46a4908cf7f0d347b9aac8e49221dd77",
+      "result.json": "dd303339e6d36248963d87328927f00e8e56ac472cfd70b2d591afd852ff7c8a",
+      "manifest.json": "95ba6fd5e96023fd57ee6e6b6d4218f6fceec8941dd94d93800a6a7393bc7261"
+    }
+  },
+  {
+    "trial": "1000-0-llm-no-memory-r0",
+    "shard": "holdout-shard-0",
+    "sha256": {
+      "session.json": "b4762fe3090247578969757fa888f5bec2eb6b48b2e0cf1e97ccded09bd51993",
+      "events.jsonl": "765b74bbe17e71263b2bc3a7eae0d7892ebb482d40940b20fea10f45415df4e3",
+      "result.json": "d2aa27f657d3755071d9590291e59fa9bf7b3e88af9c2be88f577f46b68eca2e",
+      "manifest.json": "141a31c8ee8aac62ed1bca119d3e1dadd87542a9aec9e9a5de651ab56044a4c0"
+    }
+  },
+  {
+    "trial": "1000-0-scripted-r0",
+    "shard": "holdout-shard-0",
+    "sha256": {
+      "session.json": "a800712125db78a7d01bbb0c5c46875303b0660a221fc5370180bd4cca1f03fe",
+      "events.jsonl": "45b128eef121d7d47faff7253c98b801b405fdcfd3b9ec472dc78f6bdcef401c",
+      "result.json": "33d71be5901b3a787b283b03963d221d6f953fd968f954be6dfe2f524f02178f",
+      "manifest.json": "61932180e7831f1cb15651e10de06f14a6767df50bb731f180936f5470293406"
+    }
+  },
+  {
+    "trial": "1004-0-llm-memory-r0",
+    "shard": "holdout-shard-0",
+    "sha256": {
+      "session.json": "722c764da0ed6d8766312678efaf15d580ef75abfe5f551df0a887c13afbff15",
+      "events.jsonl": "99dea28971cb573d13af9874c67d7c35f72615540b878a717aa82eeb61ade99f",
+      "result.json": "2a08d2a8f0fa62eb6d21f5f825ea08fd73f4e2b8095888a160334db0683ede3b",
+      "manifest.json": "6af38c2a9d1551adf609441ef1b2841f7b50128bc2b65914a03767219a79d660"
+    }
+  },
+  {
+    "trial": "1004-0-llm-no-memory-r0",
+    "shard": "holdout-shard-0",
+    "sha256": {
+      "session.json": "9905f28fe1f983e78de97d5466de7b678c6afbacfb6d250419eb7775f85ea7a3",
+      "events.jsonl": "f10ad8d894b58df3ddd8c15f9d1a80f80e9d08bf87de4c0f855f5277e5ad057c",
+      "result.json": "466f0700040b8bf40f3f968a1ebb506fe6c177cb454abe3fc95df71c750bf001",
+      "manifest.json": "0ec480febf0d044a76075bc87864d1d1a14c03e44e5b412756c9e5fc3c654459"
+    }
+  },
+  {
+    "trial": "1004-0-scripted-r0",
+    "shard": "holdout-shard-0",
+    "sha256": {
+      "session.json": "b9658f524bf71384b4610ae7e8bbb312ba1e34ad79184a16c0c82076d12817eb",
+      "events.jsonl": "5716b95063ca98ba5d175ee025867c426e90cf2951138747966d08bcf215a594",
+      "result.json": "cb28ca8dd04935472bf593dad17f85c6c07510204b4ac54747dd4f246160d5c8",
+      "manifest.json": "0f351e84f9e7437c77803f7bc099ee56c420f51b475a2239cbb228ae39a106b4"
+    }
+  },
+  {
+    "trial": "1008-0-llm-memory-r0",
+    "shard": "holdout-shard-0",
+    "sha256": {
+      "session.json": "14e67cd3b95b9182ff4298a1a9865580e9e91fe49ca529a344f45abde0fb4887",
+      "events.jsonl": "aaf52f8c13a26b7f5cf13b385f679659c92b7db04f3ca833789925d94dee4556",
+      "result.json": "f3ddeb1356439e6127465b874c01fc1f4e0fa6f393af3dd99b0d9015fe603932",
+      "manifest.json": "8372332f15155b77a32ea27b3cab4b9a6bf5506637fabb08b9ac04b26fba4367"
+    }
+  },
+  {
+    "trial": "1008-0-llm-no-memory-r0",
+    "shard": "holdout-shard-0",
+    "sha256": {
+      "session.json": "6b35f41e12fa60711d4460a16501e579acd7d5cbf9eba51fb87dde02892c33d8",
+      "events.jsonl": "71e6775df5e7a12306eaf932305ab30502fdf6ba339b51fff41abf060b3bf56e",
+      "result.json": "f0791711e01ad070152d2b54c50d8ef831a9323fd85412f6ad23db7597976716",
+      "manifest.json": "7cd4d617b695d2eb831b8b0838d6d4819bf4b09368802fed00d806e64a6769a0"
+    }
+  },
+  {
+    "trial": "1008-0-scripted-r0",
+    "shard": "holdout-shard-0",
+    "sha256": {
+      "session.json": "4f97fac9b2c08ddcba565de3d1150ef1bc29a8c5d940d8d38073b9499c66afc6",
+      "events.jsonl": "c959c1e89b3323da330e5c426f6db533454150616e69ac062d39da15ba56fa03",
+      "result.json": "e13bb025c15c9a977b31c9c3c1b6c87c76919d6cf0d475f6737dcb5b666538c1",
+      "manifest.json": "ee0eb8d7e40736c25475e34d8e7073f72d72aca9e3b37b75fee0a392bd9d2b06"
+    }
+  },
+  {
+    "trial": "1012-0-llm-memory-r0",
+    "shard": "holdout-shard-0",
+    "sha256": {
+      "session.json": "e811188d6957dd3c82aa22999ff3425c1d19e84584f2cd61d33b2ae3185d1e6e",
+      "events.jsonl": "4eda76e2f4dbfbb9b624cdcb96199d08c6ada41ae9761cada554e3ca20c7ba0f",
+      "result.json": "0042f0bef2ab592e64bcf152a097a41666b37f1b9058311400758b4dcdb46bbd",
+      "manifest.json": "06710f7fbcc9dc98cda9acbe92c2a129ca5c42935c7bfdae6a163dca48dbc37f"
+    }
+  },
+  {
+    "trial": "1012-0-llm-no-memory-r0",
+    "shard": "holdout-shard-0",
+    "sha256": {
+      "session.json": "50cd3e1cae183b309161542ef61eced53932839584b2735fc78c869c7f531beb",
+      "events.jsonl": "801a40aad18c1eefa14d0c5fdb1f3be49654626e64a5c87a07f758f0a954ace8",
+      "result.json": "9141a529c0ea38c4ad72a3b8c2dc7523d845193b38d7dc857931ad47fe062911",
+      "manifest.json": "b16ded949d50fde35c46d198bc35d754e2f5b9fa10989bf11c242a8ab19a9578"
+    }
+  },
+  {
+    "trial": "1012-0-scripted-r0",
+    "shard": "holdout-shard-0",
+    "sha256": {
+      "session.json": "6e5dac03425b6e92f3a49f47d10be5a6acfb2c8306c8684e9e5b207c6db43afa",
+      "events.jsonl": "db107c509b3201babe6e2d4833a2eebaaaa833f5d218243887bf20287d25525f",
+      "result.json": "49476a3ecef3d18e8774d6e9064f28de4b80a3fce6a0fb9924c642ef2a9b499d",
+      "manifest.json": "eea548a982720335b8f7aba9890185e3ab0785a69e91d02706e6487f52604f74"
+    }
+  },
+  {
+    "trial": "1016-0-llm-memory-r0",
+    "shard": "holdout-shard-0",
+    "sha256": {
+      "session.json": "c35a25eba8b3fc1be306bc8a0fce13efc492a2325cf9e69b9d54a1c5bde70250",
+      "events.jsonl": "4088f6c64c645f648c6ac7a14122c312486d162f16b91966dabce0cd3329475d",
+      "result.json": "a295607fe26d7f936809d272bd22e3ecf4603b5bae6a37a4c58dd401886dc037",
+      "manifest.json": "7b945f1debe6c7a192a44f4ffcddf04252612a7d7820e02196d853ca4508ad36"
+    }
+  },
+  {
+    "trial": "1016-0-llm-no-memory-r0",
+    "shard": "holdout-shard-0",
+    "sha256": {
+      "session.json": "105b5f56bbc4b1b01f6bdcc929b4acc261bf4bb079d0f5a59364bbd96f2b0034",
+      "events.jsonl": "645eede2e22940bc201e25d3b3ff2dbb472d591654b4ad3544603696ecc961b5",
+      "result.json": "8b3d753f5258a9fd2f6d7ce136bea1a771b61b3bfbd3940ec3d86a9364820757",
+      "manifest.json": "a29e8387aeac176bc9c0ba9ff4504cda5dd25c8e46e66ee7b3fb683d67c7d8dc"
+    }
+  },
+  {
+    "trial": "1016-0-scripted-r0",
+    "shard": "holdout-shard-0",
+    "sha256": {
+      "session.json": "5e71bd42338ea510f1d059f09a3f4e79284293078ffa8396ca07c76ca1ca9acf",
+      "events.jsonl": "da852b5878529518c0f64909a61776dd1ee6a77471ba60f124f603eae83d3f07",
+      "result.json": "74346ca88b82670629c7c31574a38c9501bee1402f768c4a36215df20107cb36",
+      "manifest.json": "bb3b0dbe2260858aa200110f0ef68ed3277943046564ad9dcb025625bb1f9b5e"
+    }
+  },
+  {
+    "trial": "1001-1-llm-memory-r0",
+    "shard": "holdout-shard-1",
+    "sha256": {
+      "session.json": "87de95ef0e861dfc04e8085a43a1e7d5d299f0b6d54dcc92e138c398224a2461",
+      "events.jsonl": "e0a180a4e5fc6a4b3a7afe21d11c5824b711b45cc903a88f310e5dd9f3c7713f",
+      "result.json": "92452ca37a65ed3bea441fb6c17e15ad816abb346c605d4224bfe1edb98c21fd",
+      "manifest.json": "3ae989a21413ad46b56c2291e6844ddd14bbf21f3c90a0a2d75a239cd4b7640a"
+    }
+  },
+  {
+    "trial": "1001-1-llm-no-memory-r0",
+    "shard": "holdout-shard-1",
+    "sha256": {
+      "session.json": "accbd3b58ec3c16f25ac5a12543cc67d842b53e33c500c94282ddc795d8505e5",
+      "events.jsonl": "1eed48a53c44e1d927d64dc82b2bf3abca0cd1b53ee91522bf914228a056a63d",
+      "result.json": "dc718df3d54974fa3bc16b8027b1b2dd8e029072c091b7835e3a0add17267ec3",
+      "manifest.json": "2cd6f9dd18e972db4ab353a7a8978e689f0be5209cfc743634c1ef561aa2782e"
+    }
+  },
+  {
+    "trial": "1001-1-scripted-r0",
+    "shard": "holdout-shard-1",
+    "sha256": {
+      "session.json": "ac451a8fe525c1efe777cefe5c3181ea9c1914a4bd3d32ebfdcaac4741d7a43d",
+      "events.jsonl": "d7cf3a632ca1c1f9fb64ae41fcd869b528b0581d4706ae215d0a2093c7ffa00e",
+      "result.json": "506a6eb9e8cddd9b6d34aec3e6da2739aa234fb12cdebfca444e21e9cc31020b",
+      "manifest.json": "40a0a078503fb80846fca9c92a05f50f6e38e82ff7affc35bb7f04a803ac7eb7"
+    }
+  },
+  {
+    "trial": "1005-1-llm-memory-r0",
+    "shard": "holdout-shard-1",
+    "sha256": {
+      "session.json": "aecb1af0cb2bc8f61db67645266ce5236da4b37a543f3ba0b7e988f54602e95b",
+      "events.jsonl": "36c7b2fd3338967c765c9fb3135509585a045772b4f77b35b1fcf0628bc59eed",
+      "result.json": "572571a55d43add8e568e843ffd1e10d5750a3c69c0b5c58917f1d34a8bb93b5",
+      "manifest.json": "28f169f88f6ae9cdac96b715e942db1ee8671b0635a73e23dcfafda93d9cfaa2"
+    }
+  },
+  {
+    "trial": "1005-1-llm-no-memory-r0",
+    "shard": "holdout-shard-1",
+    "sha256": {
+      "session.json": "9d20bfd43d73e5b9d43cee9e70eea77a8c860a09293cb9fb490d0d7a8fc12240",
+      "events.jsonl": "ebce552d5848426440ddba031f4993b9c474a9b231fd64077bcdac6608c7a289",
+      "result.json": "cc2f1415f09f72eec33fabda2f126fd24f8580d1641da2e7df07022a476e2407",
+      "manifest.json": "8a6dbaf99b71b1fa2c9059503b0326f8fdad8ae163360d63bde84d0316c2abec"
+    }
+  },
+  {
+    "trial": "1005-1-scripted-r0",
+    "shard": "holdout-shard-1",
+    "sha256": {
+      "session.json": "d6c1372a8a59a3f628901b1297b58de5e7a7915b89f30d7866d53ecb64e5170f",
+      "events.jsonl": "103d86d8f76b5ef0e860535ebc2d414dec5e041b43e5fca8a5982563b3c4faf9",
+      "result.json": "02677300af65972d9113a613d882ea7494a081b6a8cc9ca18aaa72e1216472c2",
+      "manifest.json": "734cfbf8ed089dfacbe3306fd2f8c6742257385f6d4ab35f5441e8dc44b0f0d5"
+    }
+  },
+  {
+    "trial": "1009-1-llm-memory-r0",
+    "shard": "holdout-shard-1",
+    "sha256": {
+      "session.json": "fa178da6cf4fdc288c7329af6080be640c9312384c7b15e2406c63e16342f608",
+      "events.jsonl": "ea750d98b413be67345007eeecce06c401f5337736ec2e9acbb16910fcc7a3ba",
+      "result.json": "a0e1c813365bd3cabfa76dd46edda5006ab01a15a3a57c6eb9cc1e2371258132",
+      "manifest.json": "032b5037a0c71fa7b53908b3854e9ec7566a25d3d786ab761f4777bd59fc47c7"
+    }
+  },
+  {
+    "trial": "1009-1-llm-no-memory-r0",
+    "shard": "holdout-shard-1",
+    "sha256": {
+      "session.json": "79d04bdebe0f9a605af0b39a07b5c70087bfee7d81d98d17c0c58e41a5e61240",
+      "events.jsonl": "f701a5bd9483594cebf26132c204ffa623706a72d636b59845a802bb93b6421d",
+      "result.json": "4bf33ba466bb53688f5477899577c604c26b079732605549cbca4d8e432f0d16",
+      "manifest.json": "fb85d5809d2dd4dd538db6ca4e0ce7ec8a49580b7bbfaf7bbf64f52bcaf976aa"
+    }
+  },
+  {
+    "trial": "1009-1-scripted-r0",
+    "shard": "holdout-shard-1",
+    "sha256": {
+      "session.json": "0914d1bdb17eca5b8de90d957e734fc0eb373dbece58c280cbb74d5ed7299460",
+      "events.jsonl": "b5c2ef21398f750d6958fbf4378005a4e710cef7b9125839fe4a9f6cb6999884",
+      "result.json": "60381d595d6eb4afbc2a620b0d54dcc3dbae7cd130d1ee78bfe834c7ff9e1523",
+      "manifest.json": "0885863d248bf011f90db0e309efee355f0bcdc0c2ef74e12a4c88a4af949f3c"
+    }
+  },
+  {
+    "trial": "1013-1-llm-memory-r0",
+    "shard": "holdout-shard-1",
+    "sha256": {
+      "session.json": "b2df7ec697de8fdacc25a867bbcc7f2cc21116436217222fedb19e6d97e244f1",
+      "events.jsonl": "38607e921d6d309034a30226012bf841cee28a5c343ae8c7b5119e1c448efa74",
+      "result.json": "d399094d3f9cf367eece3ad295c686c9e5271f74805aa81c6bb0551d16812d5b",
+      "manifest.json": "7dd54455896c5e1a8277fc123ae89113d01838cb6ca9acd9bef24a36efd0b284"
+    }
+  },
+  {
+    "trial": "1013-1-llm-no-memory-r0",
+    "shard": "holdout-shard-1",
+    "sha256": {
+      "session.json": "033462bb9a85b498c18b6ba570500f9674435aefd6e05e5a7c831becc96c83ac",
+      "events.jsonl": "d3822257b87beab3a4ef5f94466ead5cd75ada524bd8e93c715c06379c30f450",
+      "result.json": "a5bde206d8ecb53a66350dd39f376d80668e3d292e58b0584bfbfc5c0994d257",
+      "manifest.json": "a8d7d8debde5c3b70afeef6b1f0264eb23a924852d42b93f159bcbfebf817ce3"
+    }
+  },
+  {
+    "trial": "1013-1-scripted-r0",
+    "shard": "holdout-shard-1",
+    "sha256": {
+      "session.json": "987056afa04219fae22068f71b7d5a7e88fc353989a2c921b901999fb4a33099",
+      "events.jsonl": "ef1b68b6d504e88c8ae63f0d6902e775142401944cbc64cc90254c87ac46a85c",
+      "result.json": "b6d2a6d061a697c661d8f2491ffc84d0168de9ccba663af4bd690968ae59ebe8",
+      "manifest.json": "712344e1e9829f4c4362a2e7a0a57ba7d5800accbf74faa22dca1d1381947323"
+    }
+  },
+  {
+    "trial": "1017-1-llm-memory-r0",
+    "shard": "holdout-shard-1",
+    "sha256": {
+      "session.json": "48b44a7b18ed26e3060be730bb02b699d0ebaa2402e283efa001207552dc6f54",
+      "events.jsonl": "baf8c92a7838e2820a006bde4f5395777f4070790b05de27be2299b5f8f28ad7",
+      "result.json": "f3593b05af43ab7842b10443442d9bbb47ec56bbba76f567c86439b1c84ca66e",
+      "manifest.json": "0fcf44de29579d45cb655ae655962162ece514c32e74c57e51e010f331d683f5"
+    }
+  },
+  {
+    "trial": "1017-1-llm-no-memory-r0",
+    "shard": "holdout-shard-1",
+    "sha256": {
+      "session.json": "5bc5dd653d77911cba6b4f007d779dbf3a26977d9b6a75c92d2a091875992783",
+      "events.jsonl": "60b2032f515f21e997263426a6ba1a3488b49bbddf82f08066cc61b5222aa0d1",
+      "result.json": "326463cd9e3bad18458ad4106128c4cdc7a83744326aa29a5d0a24c5aae1f30d",
+      "manifest.json": "ec864b4fa02fd8070e7e14b47eb807ba30ec8dce681262dc261cd182ee8275e9"
+    }
+  },
+  {
+    "trial": "1017-1-scripted-r0",
+    "shard": "holdout-shard-1",
+    "sha256": {
+      "session.json": "85be5b442253c2ce01d70bbf1cfb3d7b1b848c0247022211d92103b1f3243052",
+      "events.jsonl": "1c26e8f4dc9dda13044f03f41d49b694f3dc683d2cdc833cd0043668dda1d9d3",
+      "result.json": "b30c444ab92968675594898abdc7d162cdcb51a4b2d7e3b63bd285937391442c",
+      "manifest.json": "bf6d3a7addcdd9c2e638ccd3daa9469f0e57ba467ce3040b0d903ed80e4a57ca"
+    }
+  },
+  {
+    "trial": "1002-2-llm-memory-r0",
+    "shard": "holdout-shard-2",
+    "sha256": {
+      "session.json": "a92bfd474c3a4cbf99bf07f765ed68936e9fb2b79e5c03ca1e7924eb206a2d7c",
+      "events.jsonl": "a8b0490b5a9d14ceb41cb574eb7e1f32c5f3d288ed8ecd327dd7ecadbfccc5ad",
+      "result.json": "4c40d522ac052d031a24a07c3657ef3bfcc76f2da78462d7257b695b97ccb73e",
+      "manifest.json": "b67a622d2f60db2b7c4cde1f0e5100b2edf56bbce1472ac04fcb08724cfd3117"
+    }
+  },
+  {
+    "trial": "1002-2-llm-no-memory-r0",
+    "shard": "holdout-shard-2",
+    "sha256": {
+      "session.json": "a615c2a9660af5f50e4683e8362d20cf6b5a87c75d36307078581c2652e7e2f7",
+      "events.jsonl": "5c1e09a5c4cf9196cc4805123e752397c13fad02f196152c61f49e7ba08baa63",
+      "result.json": "ea4f76dd01c60fe66da96ec1cdd88369ad7b0582e3189cce77004a63a53d1942",
+      "manifest.json": "69bfaedaf379b812bb9661a7ef8d68af0a57ec2cebbcd30d06fc1d96111384d1"
+    }
+  },
+  {
+    "trial": "1002-2-scripted-r0",
+    "shard": "holdout-shard-2",
+    "sha256": {
+      "session.json": "d714e87ec10998f7abffa819b74f668c73a68e8d359c9e28ce4245aea889afbf",
+      "events.jsonl": "a407dfe24183f1ac0b9066c1585bbd53a1b0fa042f6013b19575af209c55de54",
+      "result.json": "be6f901eb4ae03297676c27011e005c1f6e5fc7253c5ce473be3330b705883fc",
+      "manifest.json": "92fb244539ac7032dd759636124c338a1aa1f352bfc4d7f865eef7afc2ca629f"
+    }
+  },
+  {
+    "trial": "1006-2-llm-memory-r0",
+    "shard": "holdout-shard-2",
+    "sha256": {
+      "session.json": "7eeb6de788fd981a609a69b0866600ccaed61d626500fd0f5da2425196284d42",
+      "events.jsonl": "77dfd4adb0fcf6be6a90898ae450546d013c1f6bb62142ddfe2c4018551ba596",
+      "result.json": "9ede9ecc4945b4cf005f5b0ad1c7dbdd621e615413cb594b547f53b2105f4c84",
+      "manifest.json": "c49a7890bde020da9b8073b94b007f654936afa0647cdbae2862f6d4703f7b36"
+    }
+  },
+  {
+    "trial": "1006-2-llm-no-memory-r0",
+    "shard": "holdout-shard-2",
+    "sha256": {
+      "session.json": "bc65d7d4c389cb674c1193e1fe19dcf4dceb59023e0aea755a6e077e8b27d1e4",
+      "events.jsonl": "cce095250a9179bd6015e3b14811d427e66dbb53d222fbdefa6c1c02ef7f6acd",
+      "result.json": "712bce2d98bac3271edb5a9b8327546a5569db32b73d2754c2c8370f77ffebfc",
+      "manifest.json": "b259ad17f731a23c806e3f5e78b3e9d56ff38071f9c30262d7fcc12c424c5078"
+    }
+  },
+  {
+    "trial": "1006-2-scripted-r0",
+    "shard": "holdout-shard-2",
+    "sha256": {
+      "session.json": "5d2f54b16527dd9a180ecdd2210e00a780d796c1065226b0aa7489ade946a824",
+      "events.jsonl": "397114cd518dfd17e7e8b3bb698b710b9d3be2256c83a154bac398ae0bfa3262",
+      "result.json": "9735f8b2b072f0a8607b4bbcbfdd2b5bcd3e505798f5c57f466a9af222ff5c6a",
+      "manifest.json": "b2273ecaf222efa0a1219b706ed5dee74de465eca82b5163d62d052072136e20"
+    }
+  },
+  {
+    "trial": "1010-2-llm-memory-r0",
+    "shard": "holdout-shard-2",
+    "sha256": {
+      "session.json": "f048d89fdb021c113cf9a3dadec19c039419025e53e4d25ac27c4f107973cbdd",
+      "events.jsonl": "87e12cc3862d5b57cb0b2c1ce179a80ff9715149cbe1a658fa0a2aec5c6c2711",
+      "result.json": "a213797032e94d6e7551262dce7bf4ab2a53937c2bf555856b5b098ab8b134ee",
+      "manifest.json": "7a5b46d5dd7b5223db4da250ab10f45655399b8affed7d18293627a069625c8f"
+    }
+  },
+  {
+    "trial": "1010-2-llm-no-memory-r0",
+    "shard": "holdout-shard-2",
+    "sha256": {
+      "session.json": "a12f8b30bd1811ca9ac574a3a2f98ee7432dc3d75dea8395019e396c28c9a350",
+      "events.jsonl": "012aaacdce72f48949006e5c7366809014566671b6b86f0f10793ccd33db03cc",
+      "result.json": "eae3c61f32a6b181291b532a686d74f3bf968c0099717142c4e54f82989e8cec",
+      "manifest.json": "2e01a748ef959950563dd9eace87ad7e7022bbffeb336faa32bf0a7d58720734"
+    }
+  },
+  {
+    "trial": "1010-2-scripted-r0",
+    "shard": "holdout-shard-2",
+    "sha256": {
+      "session.json": "1ca10618c2f27840f706780dab1adf614456db5945c0441c4127d9dfafb7844f",
+      "events.jsonl": "32a6ed7176a3297a6bd23a5f14e80babc34556479189c2df43028981397de79c",
+      "result.json": "341e9bbcb5a870a256a2a9c2e0b341250fbc999e9167b7ec2796faa807485df8",
+      "manifest.json": "8ae0740b58a5b1392a174ac72591d86516c1f12f80152d2c6da79b471e4979d9"
+    }
+  },
+  {
+    "trial": "1014-2-llm-memory-r0",
+    "shard": "holdout-shard-2",
+    "sha256": {
+      "session.json": "0eb6592f5136bd325a06113f6b86cfa84634d60ab508b9e6b7f616c4b2e92b0e",
+      "events.jsonl": "af2f56fb50f9da765a80280530989e1ef7099e4cae015158aef72a7f5489a8d9",
+      "result.json": "47ea4f416740ad5ff6034fc33e08d08fd585961b75dd43068ae3eb9a2e35f284",
+      "manifest.json": "d6ad403c0bfc0a279ad3ec8a052d15820ac30b0b32ab8de22b30124979f9e82d"
+    }
+  },
+  {
+    "trial": "1014-2-llm-no-memory-r0",
+    "shard": "holdout-shard-2",
+    "sha256": {
+      "session.json": "9c7efce71090825ce2b4dff5f2d5e331b5f07cdc8d3b0d1f89f5bc7ac5a7dc5b",
+      "events.jsonl": "a5005e6b920ccef197708eaef270bb5061d9c0ebfa83d18690fd77c1f3293be2",
+      "result.json": "6480aa8dc07e1561cd48cbbd908168f7dcdfc8b903218ec3285b0d14d4101dcd",
+      "manifest.json": "a19b44ae5a54e31c413eebac69b0891906b8525cbfb237990f5ef6e4e01b5439"
+    }
+  },
+  {
+    "trial": "1014-2-scripted-r0",
+    "shard": "holdout-shard-2",
+    "sha256": {
+      "session.json": "04299a848d656643eff8f9a8e8fb9bc7c52ab147982d8c76430c94ce5faa787c",
+      "events.jsonl": "f544504b1c0acf206f0eaf89fda559c0b36c686445ea411ce9b1fded1e010ab7",
+      "result.json": "34ac6efea37f82b947f15507b4316c683971977b81e2756fb1e53d0cdc68f5c4",
+      "manifest.json": "6598c6883ca0af020ec6ddc19ec1a708b9b6c08d0cb824d1ba2f63b3eb0c2dc7"
+    }
+  },
+  {
+    "trial": "1018-2-llm-memory-r0",
+    "shard": "holdout-shard-2",
+    "sha256": {
+      "session.json": "e232452c9ed1b6815a5c40d864f9fb562c05aea93d369e6f4f1807fe6c185af6",
+      "events.jsonl": "59a1f545c2e0dbf6ceb298cb27d19dcb992e963e391c19f063ffe4b4943dc49c",
+      "result.json": "1c7532d3ed0a1e6e848dd4937c84bed1adec5d86e2c3eb97ae52585df86c5f8e",
+      "manifest.json": "928fec894c775bb1ca4c51354c72b846a74471d566124985edfda0201598b26a"
+    }
+  },
+  {
+    "trial": "1018-2-llm-no-memory-r0",
+    "shard": "holdout-shard-2",
+    "sha256": {
+      "session.json": "12267f9eec0ad52715fb926dd9b4565e3ed43811a5c61963fb0d21fdafdfb719",
+      "events.jsonl": "4365858428839df26e1ee9b91f3ee1309284ff5fc7806230951ed1fefad38e9b",
+      "result.json": "d642e03a0d4f1788b34e5ed86bc6d7056bec69f487ad61bc8fb77ada4b9628e0",
+      "manifest.json": "04d8982e54128b4f501b3dc1eb548581ed10606c1143212b7d857979d5b42b3b"
+    }
+  },
+  {
+    "trial": "1018-2-scripted-r0",
+    "shard": "holdout-shard-2",
+    "sha256": {
+      "session.json": "ac60c03f1856fcfe825e24453b037e8f5e3d3f453155f42fecd15bcf7ee5f5b4",
+      "events.jsonl": "a3c48bc1f57b124b384a4f553867ea97d5070a75126fda30386ba9fef4746339",
+      "result.json": "887140d580fae4c4ced1c0a2e71f972aa0540563b5b28d55535fa7440a3d6d1d",
+      "manifest.json": "11f948261a28c9d380213f29807ef4b87dcd5bdaed746e8bff728ce07487b9d7"
+    }
+  },
+  {
+    "trial": "1003-3-llm-memory-r0",
+    "shard": "holdout-shard-3",
+    "sha256": {
+      "session.json": "0d4ecd01d3563d43b13f7f15e4cbe221d76fb8189c2b4424b4febb90f8ca4317",
+      "events.jsonl": "26d48a371994fafae0a83ba2a479b3f4edf172f05f20abda012ecae0ad3ca82f",
+      "result.json": "fcc41b7c8a20a43ac0df2f9b7b80600cf1243f8bec0edcef14e712c3dc68555a",
+      "manifest.json": "70887b744e97861f0bc7396f7b4632466439217720d40312f70dfd30e0ed4b7b"
+    }
+  },
+  {
+    "trial": "1003-3-llm-no-memory-r0",
+    "shard": "holdout-shard-3",
+    "sha256": {
+      "session.json": "a49d99d268454379386eb20b56a8b0feb191efc4c3d54beece3df21fe236b2f3",
+      "events.jsonl": "6974680449d96d89e50edd86bbb1a3136384efd0ff68c0912698b53cc258f8d4",
+      "result.json": "5873bd5f24909b643149da43211953c03e44208bad7ec1243e746e8cee3790bd",
+      "manifest.json": "ace4f0606fc46ba1c22bc41e09bc15e93580c83ed4d737e101426ef20a86112a"
+    }
+  },
+  {
+    "trial": "1003-3-scripted-r0",
+    "shard": "holdout-shard-3",
+    "sha256": {
+      "session.json": "8c8486728b00bdab3bdd220bf1381fbc2de5362f11769ae89fef13c070a73089",
+      "events.jsonl": "1c16a223c6155218413f640f57a6f36649c0983ee34a468b277e8e02ab0566fd",
+      "result.json": "61aa4b5ac9645dc68baa9ea8ab79752ef25bbdf2e45fe1ec730a3d6ec8ab2c8d",
+      "manifest.json": "e5369312ab8bb53d6c6ebc74c7538be4d2d3ab9c8a86c57b840000e876633e8d"
+    }
+  },
+  {
+    "trial": "1007-3-llm-memory-r0",
+    "shard": "holdout-shard-3",
+    "sha256": {
+      "session.json": "136e9e6ef55ff61f78d97d35e1556ec7f217b2df1ceb9a98c3c70d8d5240ea6e",
+      "events.jsonl": "41c4f8f38d73d07da662967b365f2f359d6ad08ec1d6e8485ed3aa98cd334bf7",
+      "result.json": "b0bb347efffa27343d353c8c04ff4f13f39e2f21c8dd20531e424fe00f374345",
+      "manifest.json": "66644b9cc7dbd7bc2b099e1c5a70bbabb80110c92aa2427a0d832ce85f8ae81f"
+    }
+  },
+  {
+    "trial": "1007-3-llm-no-memory-r0",
+    "shard": "holdout-shard-3",
+    "sha256": {
+      "session.json": "19984bd48039ba9955a24890de9593a5c22fff601607740614d4163b97ef4732",
+      "events.jsonl": "fa0fad9792669400e796b959a33cc2638d936cff1eca578638dfd85e0e1ff91d",
+      "result.json": "4e90d006a7ea31b68159ef58f4be096342ceae44fa5ebda402bb0d4421a0a6b3",
+      "manifest.json": "2a9e85a7e4f4ef5aa90b8895d9cc8abb3ebfb60308a6b7f6e12f5285c6a5496a"
+    }
+  },
+  {
+    "trial": "1007-3-scripted-r0",
+    "shard": "holdout-shard-3",
+    "sha256": {
+      "session.json": "646c251e75df637f5400af1e8cdfd951408c6b577671420ff11e8503b73f57dc",
+      "events.jsonl": "499f49fe895493e970bb9333b488015ac2505cbfbca8b68b00a7f9eea04b09eb",
+      "result.json": "4590fbc26aa056d4d08d56140b6439adedfe0c3f57dcda443440908b22f12e98",
+      "manifest.json": "db4721a158186f937cb45b67045606f13ef0821e87b08303cc12ebdc17bc7ad5"
+    }
+  },
+  {
+    "trial": "1011-3-llm-memory-r0",
+    "shard": "holdout-shard-3",
+    "sha256": {
+      "session.json": "0c4c65d092d51fc1ab3ff1bcd97cc95810683c0aef6d38fdb751091256e75b9f",
+      "events.jsonl": "4de33386cd413ec23ded4cd5ed3f349df4dd6c7bb33ec9ddde3f953a57ba27c0",
+      "result.json": "d8c6b551cd318e31a0c50ec963b140ee8460b49069952dc9e531cea966471f5b",
+      "manifest.json": "39144e8c96419a81d055652d67730674723e6760216731fe44bee01b3d2f7483"
+    }
+  },
+  {
+    "trial": "1011-3-llm-no-memory-r0",
+    "shard": "holdout-shard-3",
+    "sha256": {
+      "session.json": "db1f407a5e65b30957854380c52ae717561b35c99ac5a25ea2e4472d56211c1a",
+      "events.jsonl": "575a7e342e0189040c09d5979057eef5ded477a9dcca032ad2eb16a0609032cb",
+      "result.json": "f96acbf548c67d3451b370977716ad95d8a9c189d2eb356975ce712861740a7f",
+      "manifest.json": "45bb2f94601e30653ae3ae1d368a205d347eece74a9b6b8c1ed3b01f44aa3c2d"
+    }
+  },
+  {
+    "trial": "1011-3-scripted-r0",
+    "shard": "holdout-shard-3",
+    "sha256": {
+      "session.json": "9a349bae6880d6b84538993d755564c223d1798756c609847adc784181bf085f",
+      "events.jsonl": "8aaa221ea56199aee25bea0f8dc3c6921bdf97d33bb9fc4d238561e04227c63d",
+      "result.json": "b4ada09fc211667718b0e6e6030b2b1a11cdd650d95d13edebaa3a0e7e511157",
+      "manifest.json": "94610b831ba5502343f8c2815a0728d32f328d7ef13bf9d77bf9b0ecf1e77413"
+    }
+  },
+  {
+    "trial": "1015-3-llm-memory-r0",
+    "shard": "holdout-shard-3",
+    "sha256": {
+      "session.json": "b0a596737c485f92195334768ffb24251cbc72774e96eb6f8d392e5ef92c2b5e",
+      "events.jsonl": "e79cf7cfe32a8064aef099eab937658921f2e5b8b4019ba850f15a6c8df4b449",
+      "result.json": "ac2a4e852eaf74ea1989bf0c6133c5dcec2139d1ee753dd7855518bc288b297d",
+      "manifest.json": "fc8456f547d76d6b741da31daa541476fe354325517d5f2ea90d88e30dc32312"
+    }
+  },
+  {
+    "trial": "1015-3-llm-no-memory-r0",
+    "shard": "holdout-shard-3",
+    "sha256": {
+      "session.json": "6f39453aeafc9b5a4d2c43008ba22239b05d73f37cd471bc2f1baf9fd61d5fb7",
+      "events.jsonl": "5d7ed87d434e09f0fed2a62b43512a70ac9fe5486102321c735309c3991411b1",
+      "result.json": "5176c621d768b0bce7b174ba5d9da9cdaafdac944b9aad5de14897f88f58e112",
+      "manifest.json": "453522c10bf1062b6391a6d352d316bdf37f90641f51074233cee37c3d163382"
+    }
+  },
+  {
+    "trial": "1015-3-scripted-r0",
+    "shard": "holdout-shard-3",
+    "sha256": {
+      "session.json": "b2bf4dd291be810f648bb0070e82fa43c270769a3982707a8a905246d8bfee0d",
+      "events.jsonl": "82ac575b7c5cf601f7fdd04993b951dda6a60c0e64aea6215d48d567dc0184e2",
+      "result.json": "9d465a7886c86fe0116015ce53ab5f589f42ad7c96421f5e93e05083ac0785e6",
+      "manifest.json": "f87cc928f4fd73032fd290c55aa2b5c2687aafbc338068fb8c43a9e0e8e0d529"
+    }
+  },
+  {
+    "trial": "1019-3-llm-memory-r0",
+    "shard": "holdout-shard-3",
+    "sha256": {
+      "session.json": "0855710c95a8820e1aacb3202e72eb4cf24a603f737b1d113ae45e942fb715dd",
+      "events.jsonl": "eb9c32d3c59918e5a3ef28101fd216f63e4a46cd7c9bfff3d7b34e514a04ef3a",
+      "result.json": "76b5ee18d7b5455390825093bbb4bb917e202a71fa21f0a8ff8c296d5eaf784f",
+      "manifest.json": "812c7430e323c3b67b3623082b5907029bcd5ffb6fa3a48f8596f92efbefcfae"
+    }
+  },
+  {
+    "trial": "1019-3-llm-no-memory-r0",
+    "shard": "holdout-shard-3",
+    "sha256": {
+      "session.json": "69559237281addf2b94408b4dc34760bf03b350d3db2f42c69fafcbddb9d9559",
+      "events.jsonl": "1facdeb0546330a7c2caafc11613060d9d9390fa95b43b1f88913f96f1ddad62",
+      "result.json": "2c4f9665f48c39fe8be862afb223c33c54365dd52ee8e1873b91e443084639d8",
+      "manifest.json": "a5b8445b57f445972cee6893bef1f5fd9e2459a0e77e81713417580bc5a3e716"
+    }
+  },
+  {
+    "trial": "1019-3-scripted-r0",
+    "shard": "holdout-shard-3",
+    "sha256": {
+      "session.json": "944f14f0c0d85d282ffa6c004d6db87fde1feaf9848ae9d0c00cea96494c7a17",
+      "events.jsonl": "d2dfdace0af11d9ec5acc9d0706028a011ffc2fd4b1e189dcc4fc9960339aed9",
+      "result.json": "96a9d68f40c3f942db1be7c06b7326f4ba3cc9973f4eb31bac4e623a252e9371",
+      "manifest.json": "67318e680ce6db7c9da1dcadf71260de8e8c539660d625c7f260bfb9e160a1a4"
+    }
+  }
+]

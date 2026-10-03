@@ -1,0 +1,11 @@
+{
+  "label": "Explicitly prompted live capability probe; not evidence of spontaneous tool use or strategic benefit.",
+  "capability": "planning",
+  "instruction": "This is a tool integration check, not a strategy benchmark. Before submitting, call simulate_candidates with exactly three distinct legal actions and horizon 8. Choose an action using the returned outcomes and mention the comparison in your intent.",
+  "seed": 100,
+  "model": "glm-5.3",
+  "reasoning_effort": "low",
+  "max_output_tokens": 4096,
+  "script_sha256": "3dde676d781da6cb32e5d52e6ba71f77ba6154b358565d7d5f7d754684f0eee1",
+  "source_sha256": "dacd08b51bfc63dd3a6abedd8d4ef25aef37407e62eaa06b78bf6166f941f916"
+}
