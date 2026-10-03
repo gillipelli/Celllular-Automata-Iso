@@ -7,7 +7,7 @@ class World {
 public:
   World(const Config &config, uint64_t seed, int threads = 1, bool empty = false);
   void tick();
-  StepResult step(std::span<const Action> actions);
+  StepResult step(std::span<const Action> actions, std::span<const uint8_t> external = {});
   const Civilization *civilization() const { return civilization_.get(); }
   uint64_t current_tick() const { return tick_; }
   uint64_t digest() const;

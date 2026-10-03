@@ -148,15 +148,21 @@ void Civilization::found(int k, int cell, bool successor) {
   if (successor)
     emit(EventType::Founding, k, cell, kingdom.generation);
 }
-bool Civilization::apply(std::span<const Action> actions) {
-  if (actions.size() != kingdoms_.size())
+bool Civilization::apply(std::span<const Action> actions, std::span<const uint8_t> external) {
+  if (actions.size() != kingdoms_.size() ||
+      (!external.empty() && external.size() != kingdoms_.size()))
     return false;
-  for (const auto &a : actions)
-    if (!a.valid(static_cast<int>(kingdoms_.size())))
-      return false;
   for (size_t k = 0; k < kingdoms_.size(); ++k) {
-    kingdoms_[k].action = actions[k];
-    kingdoms_[k].external_policy = true;
+    if (!external.empty() && external[k] > 1)
+      return false;
+    if ((external.empty() || external[k]) && !actions[k].valid(static_cast<int>(kingdoms_.size())))
+      return false;
+  }
+  for (size_t k = 0; k < kingdoms_.size(); ++k) {
+    const bool controlled = external.empty() || external[k];
+    if (controlled)
+      kingdoms_[k].action = actions[k];
+    kingdoms_[k].external_policy = controlled;
   }
   return true;
 }

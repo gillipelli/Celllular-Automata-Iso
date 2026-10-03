@@ -59,3 +59,19 @@ jobs:
       - run: cmake --build build -j 2
       - run: python tests/bridge_tests.py --library "$PWD/build/libashfall_bridge.so"
       - run: python python/train_mappo.py --library "$PWD/build/libashfall_bridge.so" --envs 1 --iterations 1 --rollout 2 --epochs 1 --out runs/smoke
+  agent-contracts:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r python/requirements-agents.txt pytest
+      - run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF
+      - run: cmake --build build -j 2
+      - name: Offline agent contracts and mocked provider protocols
+        run: PYTHONPATH=python ASHFALL_LIBRARY="$PWD/build/libashfall_bridge.so" python -m pytest -q python/tests
+      - name: Scripted tool demonstration and recorded action replay
+        run: |
+          PYTHONPATH=python python -m ashfall_agents play --config config/presets/agent-demo.toml --controllers fixture,native,native,native --steps 4 --run-dir runs/ci-agent
+          PYTHONPATH=python python -m ashfall_agents replay --run runs/ci-agent

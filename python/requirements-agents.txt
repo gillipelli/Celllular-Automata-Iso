@@ -1,0 +1,3 @@
+numpy>=1.26,<3
+pydantic>=2.7,<3
+anthropic>=0.40,<1

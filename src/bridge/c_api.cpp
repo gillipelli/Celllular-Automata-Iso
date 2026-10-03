@@ -3,6 +3,7 @@
 #include <cmath>
 #include <cstring>
 #include <memory>
+#include <sstream>
 #include <string>
 #ifdef _WIN32
 #define API extern "C" __declspec(dllexport)
@@ -156,8 +157,8 @@ API int ashfall_observe(void *handle, float *output, size_t count) {
   }
   return 1;
 }
-API int ashfall_step(void *handle, const float *input, size_t count, double *rewards,
-                     uint8_t *done) {
+API int ashfall_step_mixed(void *handle, const float *input, size_t count, const uint8_t *mask,
+                           size_t mask_count, double *rewards, uint8_t *done) {
   using namespace ashfall;
   if (!handle || !input || !rewards || !done)
     return 0;
@@ -170,8 +171,19 @@ API int ashfall_step(void *handle, const float *input, size_t count, double *rew
     error = "episode finished; reset before stepping";
     return 0;
   }
+  if (!mask || mask_count != static_cast<size_t>(env.cfg.world.kingdoms)) {
+    error = "wrong control mask size";
+    return 0;
+  }
+  for (size_t k = 0; k < mask_count; ++k)
+    if (mask[k] > 1) {
+      error = "control mask must contain zero or one";
+      return 0;
+    }
   std::array<Action, 12> actions;
   for (int k = 0; k < env.cfg.world.kingdoms; ++k) {
+    if (!mask[k])
+      continue;
     const float *values = input + k * ACTIONS;
     auto &action = actions[static_cast<size_t>(k)];
     for (int j = 0; j < ACTIONS; ++j)
@@ -221,12 +233,77 @@ API int ashfall_step(void *handle, const float *input, size_t count, double *rew
       return 0;
     }
   }
-  const auto result =
-      env.world->step({actions.data(), static_cast<size_t>(env.cfg.world.kingdoms)});
+  const auto result = env.world->step({actions.data(), static_cast<size_t>(env.cfg.world.kingdoms)},
+                                      {mask, mask_count});
   for (int k = 0; k < env.cfg.world.kingdoms; ++k) {
     rewards[k] = result.rewards[static_cast<size_t>(k)];
     done[k] = static_cast<uint8_t>(result.terminated[static_cast<size_t>(k)]);
   }
   done[env.cfg.world.kingdoms] = static_cast<uint8_t>(result.truncated);
   return 1;
+}
+
+API int ashfall_step(void *handle, const float *input, size_t count, double *rewards,
+                     uint8_t *done) {
+  std::array<uint8_t, 12> mask;
+  mask.fill(1);
+  return ashfall_step_mixed(handle, input, count, mask.data(),
+                            static_cast<size_t>(ashfall_agents(handle)), rewards, done);
+}
+API const char *ashfall_metadata(void *handle, int kingdom) {
+  static thread_local std::string result;
+  if (!handle) {
+    error = "null environment";
+    return nullptr;
+  }
+  const auto &env = *static_cast<Environment *>(handle);
+  const auto &world = *env.world;
+  const auto &civ = *world.civilization();
+  std::ostringstream out;
+  out.precision(17);
+  out << "{\"schema_version\":1,\"tick\":" << world.current_tick()
+      << ",\"macro_interval\":" << env.cfg.world.macro_interval
+      << ",\"episode_ticks\":" << env.cfg.world.episode_ticks
+      << ",\"num_agents\":" << env.cfg.world.kingdoms;
+  if (kingdom >= 0) {
+    if (kingdom >= env.cfg.world.kingdoms) {
+      error = "invalid kingdom";
+      return nullptr;
+    }
+    const auto &k = civ.kingdoms()[static_cast<size_t>(kingdom)];
+    out << ",\"kingdom_id\":" << k.id << ",\"generation\":" << k.generation
+        << ",\"alive\":" << (k.alive ? "true" : "false")
+        << ",\"population\":" << static_cast<double>(k.stats.population) / 65536.
+        << ",\"military\":" << static_cast<double>(k.stats.military) / 65536.
+        << ",\"infected\":" << static_cast<double>(k.stats.infected) / 65536.
+        << ",\"area\":" << k.stats.area << ",\"nodes\":" << k.stats.nodes
+        << ",\"functional_nodes\":" << k.stats.functional << ",\"stock\":{";
+    const char *names[] = {"wood", "stone", "grain", "treasury"};
+    for (size_t r = 0; r < 4; ++r) {
+      if (r)
+        out << ',';
+      out << '\"' << names[r] << "\":" << static_cast<double>(k.stock[r]) / 65536.;
+    }
+    out << "},\"reputation\":[";
+    for (int r = 0; r < env.cfg.world.kingdoms; ++r) {
+      if (r)
+        out << ',';
+      out << scalar(k.reputation[static_cast<size_t>(r)]);
+    }
+    out << "],\"treaties\":[";
+    bool first = true;
+    for (const auto &t : civ.treaties())
+      if (t.proposer >= 0 && (t.a == kingdom || t.b == kingdom)) {
+        if (!first)
+          out << ',';
+        first = false;
+        out << "{\"partner\":" << (t.a == kingdom ? t.b : t.a) << ",\"type\":" << t.type
+            << ",\"proposer\":" << t.proposer << ",\"active\":" << (t.active ? "true" : "false")
+            << ",\"expires\":" << t.expires << ",\"quota\":" << scalar(t.quota) << '}';
+      }
+    out << ']';
+  }
+  out << '}';
+  result = out.str();
+  return result.c_str();
 }

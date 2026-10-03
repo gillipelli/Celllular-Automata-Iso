@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-10-02 — LLM controller infrastructure
+
+Implemented mixed native/external stepping, own-kingdom metadata, control-mask session replay, bounded tool-based controllers, generation-scoped memory, GLM-5.3 and optional Anthropic adapters, privileged branch planning, checkpoints, budget ledgers, tournament summaries and HTML traces.
+
+- GCC Release rebuild and all five configured CTest groups pass, including native mixed-policy equivalence, atomic rejection, privacy checks and Python bridge/session validation.
+- All 42 agent Python tests pass. Coverage includes malformed provider responses, duplicate tool IDs, reasoning round trips, uncertain-request budget reservation, simulator identity on resume, original-generation survival, dead-slot call suppression, and checkpoint-consistent interruption reporting.
+- A real bridge-backed offline fixture run completed and its saved actions reproduced the digest. An eight-episode scripted/fixture smoke tournament completed. A privileged fixed-candidate search run and replay also passed.
+- Planning runs in a spawned worker with a parent-enforced deadline that includes reconstruction. Tests verify timeout termination and unchanged live state.
+- Changed C++ files pass clang-format 18.1.8 validation; `git diff --check` passes. The agent-contract CI job is configured but remote CI execution has not been observed.
+
+These are software and offline-tool checks. No paid API calls were made. Live LLM strategy quality, comparative performance, actual token cost and the twenty-seed live study remain unmeasured. The native policies use internal state and are not information-matched partial-observation baselines. See [the evaluation protocol](AGENT_EVALUATION_PROTOCOL.md) and [agent guide](AGENT_GUIDE.md).
+
 ## 2026-09-07 — M0 foundation and initial M1 forest
 
 **M1 does not pass the design's acceptance gate.** This implementation stops before kingdoms and RL, following §27. The original design document remains unchanged.

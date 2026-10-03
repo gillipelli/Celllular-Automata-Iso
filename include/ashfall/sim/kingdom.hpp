@@ -50,7 +50,8 @@ class Civilization {
 public:
   Civilization(const Config &, TerrainLayers &, ForestSystem &, uint64_t seed);
   void tick(uint64_t tick);
-  bool apply(std::span<const Action> actions);
+  bool apply(std::span<const Action> actions, std::span<const uint8_t> external = {});
+  const std::array<Treaty, 66> &treaties() const { return treaties_; }
   const std::vector<Kingdom> &kingdoms() const { return kingdoms_; }
   const KingdomLayers &layers(int k) const { return layers_[static_cast<size_t>(k)]; }
   const std::vector<Node> &nodes() const { return nodes_; }

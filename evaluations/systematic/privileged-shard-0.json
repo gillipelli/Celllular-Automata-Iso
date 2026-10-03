@@ -1,0 +1,31 @@
+{
+  "config": "config/presets/agent-demo.toml",
+  "seeds": [
+    100
+  ],
+  "positions": [
+    0
+  ],
+  "kingdoms": 4,
+  "steps": 256,
+  "decision_interval": 16,
+  "track": "privileged",
+  "planning_budget": {
+    "candidates": 3,
+    "horizon": 8
+  },
+  "scenario": "calibrated-demo-1024ticks",
+  "repeats": 1,
+  "comparison_reference": "search",
+  "variants": [
+    {
+      "id": "llm-planning",
+      "controller": "llm",
+      "use_memory": true
+    },
+    {
+      "id": "search",
+      "controller": "search"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "config": "config/presets/agent-demo.toml",
+  "positions": [
+    0
+  ],
+  "kingdoms": 4,
+  "steps": 256,
+  "decision_interval": 16,
+  "track": "partial",
+  "scenario": "calibrated-demo-1024ticks",
+  "repeats": 1,
+  "comparison_reference": "scripted",
+  "variants": [
+    {
+      "id": "llm-memory",
+      "controller": "llm",
+      "use_memory": true
+    },
+    {
+      "id": "llm-no-memory",
+      "controller": "llm",
+      "use_memory": false
+    },
+    {
+      "id": "scripted",
+      "controller": "scripted"
+    }
+  ],
+  "seeds": [
+    1001,
+    1005,
+    1009,
+    1013,
+    1017
+  ],
+  "positions_by_seed": {
+    "1001": [
+      1
+    ],
+    "1005": [
+      1
+    ],
+    "1009": [
+      1
+    ],
+    "1013": [
+      1
+    ],
+    "1017": [
+      1
+    ]
+  }
+}

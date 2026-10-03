@@ -1,0 +1,73 @@
+{
+  "design": "20 heldout independent seeds, one balanced rotated kingdom position per seed, paired memory/no-memory/scripted; reduced from all4 positions for budget",
+  "development": "5 independent seeds, one rotated position perseed, identical3 variants",
+  "horizon": "256 macrosteps=1024 simulationticks, decisioncadence16; calibrated solely on developmentseeds100,101",
+  "model": "glm-5.3",
+  "reasoning_effort": "low",
+  "max_output_tokens": 4096,
+  "primary": "original_generation_survival at fixed1024ticks",
+  "secondary": [
+    "population",
+    "grain",
+    "functional_nodes",
+    "fallback_rate",
+    "tokens",
+    "latency"
+  ],
+  "statistics": "paired differences;2000 bootstrapresamples over seeds, not positions or decisions",
+  "holdout_policy": "No configuration tuning from holdout outcomes. Failures retained; no replacement seeds.",
+  "files": {
+    "development-shard-0.json": "11a149f366787e359034faff98882e31d453553bc1c89d0e7827d919be680a05",
+    "development-shard-1.json": "9ef82cd471220b877ec22c9e6309c491aeb6a3c2864f802b0cc0e8f333beed70",
+    "development-shard-2.json": "e5893edf1200781f349d5fb19b09a34309a1f34728ea000fac91e8a1fd616199",
+    "development-shard-3.json": "098b47d3edd4ef0971fa3ccf69acb861db326fd955979644661b5dbc7a1789bf",
+    "holdout-shard-0.json": "6a83b7710fe87a097b8b860be5453489c4f7314b0fb479ec526dd0823ac657cc",
+    "holdout-shard-1.json": "caa3b63d8af66868afad5d5ed0f1c52a381224173947a47428668d8116366865",
+    "holdout-shard-2.json": "d19ed6cdc4bd892d722d8faa5c8c322fdebf73c2e31ad294a1eb7c319dfed127",
+    "holdout-shard-3.json": "d037d0c4e8eb83e2287eec08bf86906802bda6bee48f31f4b9345a9dd06e8f6c",
+    "privileged-shard-0.json": "5e72f71739e26846cf5877042117a87d0066cda6babb41a07da2bad5ff62502c"
+  },
+  "development_revision": "v2: truthful public action catalog, explicit survival objective, horizon/cadence, optional tool use. Revised before any heldout dispatch; v1 development and interruptions retained.",
+  "execution_concurrency": "2 workers, shared process-safe campaign capacity2; one auth/payment error or two quota errors request cooperative stop.",
+  "implementation": {
+    "python/ashfall_agents/__init__.py": "fd1bdf8fc803b9663c1c334de22838532dc8f49fce739b8ef9e7656fd0436120",
+    "python/ashfall_agents/__main__.py": "0b23a5814d40199028febcd674c0432d3a92796efa0fe67fc13d5e3a0e52fdd4",
+    "python/ashfall_agents/campaign_budget.py": "70cb29c2c22f3546ee4ed9d94be4217bfff79bbc1f117140a671de73ce73eef7",
+    "python/ashfall_agents/credentials.py": "931ab3bffe1aadf9a991bcbf8a819912218b991dd8ae4cfc1c415afa3a5d3c1d",
+    "python/ashfall_agents/evaluation.py": "742888b6f64d80582f3c636f741177dfdc79f8970813d3841b63e48d71ac26f1",
+    "python/ashfall_agents/memory.py": "57f13ae068b09ec08ab185977abef9e86762207bb72cf1bda4b3c94eaa3d4232",
+    "python/ashfall_agents/observations.py": "319c7c9666848316b8407f1c6344c4cad32ed1cfa91a2f05a8453af7a83f4a20",
+    "python/ashfall_agents/planning.py": "fb07012677214383e004ec773675ec7a7abfc96a80a2b86f6c15e42532588df3",
+    "python/ashfall_agents/provider.py": "99288f7ea37defedec4412eed5c23459d751123d3e21deb76633f6c021e03a0b",
+    "python/ashfall_agents/runner.py": "824fc50006643694aafe0de1a636cd6850898d1bd2f797b23c6c5a3bcc73d229",
+    "python/ashfall_agents/runtime.py": "6d765d93bba826847dd223b4ae6ad1db2f2a0425920848a7776aecbab9c68246",
+    "python/ashfall_agents/schemas.py": "f0872daa3770c68911742bf64bdd3b786597f82054b7c34a06bc6c0d2a07b841",
+    "python/ashfall_agents/tournament.py": "9f53f37ac73a1048cfce31123e6d916259b761cba4c7f69d53a84e8b01418b11",
+    "python/ashfall_agents/zai_provider.py": "0791967d5d235cbb5109ec6173c9726b088e92ce4dc925e2e26b359046147006"
+  },
+  "wrapper_sha256": "932e171a2a723afcbef745faeeed16e90613c9a9d368a740437a1139c21eeec2",
+  "simulator_sha256": "934587a30b3f82566ea76acb99373019fefeb8e75015f13bd0d1b41d7eee5013",
+  "campaign_scripts": {
+    "scripts/audit_agent_stage.py": "01b214cc504f5dc80388d742fa191ab2ca7f1e2539668792498c375261306be3",
+    "scripts/calibrate_agent_horizons.py": "ff968fd161c4a2fb223f1d866a1ad9dbde22a3f74b4f2d3baff57997747c9401",
+    "scripts/probe_agent_capability.py": "3dde676d781da6cb32e5d52e6ba71f77ba6154b358565d7d5f7d754684f0eee1",
+    "scripts/run_agent_campaign_stage.py": "9b471af51376808fbcc30160e17dc837abdfcd580db4e32e1856dba721e4e2d2",
+    "scripts/watch_agent_stage.py": "e452433773725b697574f5a89ed70d98a31349e496f292b0a8c44d31f38542f9"
+  },
+  "pre_holdout_fixes": [
+    "Internal episode/run/seed/digest metadata excluded from model-facing memory and query matching; stored generation/kingdom scoping retained.",
+    "Shared campaign dispatcher capacity2, with per-shard USD ledgers. Model prompt and frozen cohorts unchanged."
+  ],
+  "development_gate": {
+    "episodes": 15,
+    "live_episodes": 10,
+    "valid_committed_decisions": 160,
+    "action_proposals": 161,
+    "invalid_proposals_repaired": 1,
+    "fallbacks": 0,
+    "provider_errors": 0,
+    "replay_matches": 15,
+    "memory_recalls": 0,
+    "successful_response_tokens": 466921
+  }
+}

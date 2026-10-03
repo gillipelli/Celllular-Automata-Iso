@@ -65,9 +65,9 @@ uint64_t World::digest() const {
   }
   return h.finish();
 }
-StepResult World::step(std::span<const Action> actions) {
+StepResult World::step(std::span<const Action> actions, std::span<const uint8_t> external) {
   if (!civilization_ || tick_ % static_cast<uint64_t>(config_.world.macro_interval) != 0 ||
-      !civilization_->apply(actions))
+      !civilization_->apply(actions, external))
     std::abort();
   StepResult result;
   std::array<int64_t, 12> before{};

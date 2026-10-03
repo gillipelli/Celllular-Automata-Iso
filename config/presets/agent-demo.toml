@@ -1,0 +1,11 @@
+# Short deterministic fixture/demo episode. Not a scientific benchmark.
+[world]
+size = 64
+kingdoms = 4
+macro_interval = 4
+episode_ticks = 2000
+forest_warmup = 0
+[simulation]
+enabled = 1
+max_nodes = 128
+policy = 2

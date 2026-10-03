@@ -1,0 +1,1 @@
+{"config":"config/presets/agent-demo.toml","seeds":[42,43],"positions":[0,1],"controllers":["scripted","fixture"],"kingdoms":4,"steps":4,"track":"partial"}

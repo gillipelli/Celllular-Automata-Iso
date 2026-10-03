@@ -8,6 +8,27 @@ Kingdoms grow population fields, claim land, extract resources, build dependent 
 
 The original design contains scientific assumptions that cannot be used as universal correctness gates. [Amendment 1](docs/AMENDMENT-1.md) records the authorized corrections. This is an executable research baseline: the original headline scientific results and trained-policy convergence have **not** been established. See [implementation coverage](docs/IMPLEMENTATION.md) and [measurements](docs/VALIDATION.md).
 
+## LLM strategy agents
+
+The optional Python agent layer adds validated tool calling, generation-scoped strategy memory, mixed native/LLM control, bounded privileged planning, checkpoint recovery, and portable HTML traces. Z.ai GLM-5.3 is the default live provider; Anthropic is an explicit alternative. The simulator still performs all state transitions and validates actions before applying them.
+
+Start with an offline scripted tool demonstration:
+
+```sh
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -r python/requirements-agents.txt pytest
+# Build the bridge using the commands below first.
+PYTHONPATH=python python -m ashfall_agents play \
+  --config config/presets/agent-demo.toml \
+  --controllers fixture,native,native,native --steps 4 \
+  --run-dir runs/agents/demo
+PYTHONPATH=python python -m ashfall_agents replay --run runs/agents/demo
+PYTHONPATH=python python -m pytest -q python/tests
+```
+
+Open `runs/agents/demo/report.html` to inspect the observations, tool calls, actions, and results. `fixture` is deterministic test logic, not an LLM. No API key or paid request is needed for these commands. See the [agent guide](docs/AGENT_GUIDE.md) for live configuration, resume, tournaments, and the distinction between partial observations and privileged rollouts. The [evaluation protocol](docs/AGENT_EVALUATION_PROTOCOL.md) defines what measured results can support.
+
 ## Build and run
 
 Requires CMake 3.24+, a C++20 compiler, and Python 3 for tests. CMake downloads SHA-256-pinned C++ dependencies. Graphics libraries and PyTorch are unnecessary for the default build.
